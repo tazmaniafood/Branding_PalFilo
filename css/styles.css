@@ -129,7 +129,7 @@ a {
 /* Las pestañas bajan y se abren a los lados del sello */
 .menu__list {
   display: grid;
-  grid-template-columns: 1fr 172px 1fr;
+  grid-template-columns: 1fr 290px 1fr;
   align-items: end;
   width: min(100% - 2 * var(--space-md), 1400px);
   min-height: 96px;
@@ -144,31 +144,20 @@ a {
 /* El sello: un círculo de neón con los cuatro colores del faldón,
    colgado en el centro de la carpa, y el logo encendido adentro */
 .menu__sello {
-  --d: 150px;
+  --d: 270px;
   position: absolute;
   z-index: 2;
-  top: 10px;
+  top: 14px;
   left: 50%;
   translate: -50% 0;
-  display: grid;
-  place-items: center;
+  display: block;
   width: var(--d);
-  aspect-ratio: 1;
-  padding: 26px 20px;
-  background:
-    radial-gradient(circle, rgb(58 28 92 / 0.9), var(--noche) 70%) padding-box,
-    conic-gradient(from -45deg, var(--mango) 0 25%, var(--cian) 0 50%, var(--lima) 0 75%, var(--tomate) 0) border-box;
-  border: 4px solid transparent;
-  border-radius: 50%;
-  box-shadow:
-    0 0 10px rgb(255 201 60 / 0.55),
-    0 0 26px rgb(46 200 255 / 0.35),
-    0 6px 0 var(--uva);
   transition: transform var(--dur-fast) var(--ease-pop);
 }
 
+/* El logo cuelga del centro de la carpa y se asoma por debajo del faldón */
 .menu__sello:hover { transform: scale(1.04); }
-.menu__sello img { width: 100%; height: auto; }
+.menu__sello img { display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 14px rgb(13 9 25 / 0.7)); }
 
 @media (min-width: 1281px) {
   .menu__list .menu__tab { font-size: 0.9rem; padding: 0.3rem 0.75rem; }
@@ -185,7 +174,7 @@ a {
     gap: 6px;
     width: 100%;
     min-height: 0;
-    padding: 136px var(--space-md) var(--space-sm);
+    padding: 128px var(--space-md) var(--space-sm);
     overflow-x: auto;
     scrollbar-width: none;
     transition: padding-top 0.25s var(--ease-out);
@@ -194,7 +183,7 @@ a {
   .menu__lado { display: contents; }
   .menu__hueco { display: none; }
   .menu__tab { flex-shrink: 0; }
-  .menu__sello { --d: 116px; padding: 20px 15px; transition: opacity 0.2s, scale 0.25s var(--ease-out); }
+  .menu__sello { --d: 190px; transition: opacity 0.2s, scale 0.25s var(--ease-out); }
   .menu--compacto .menu__list { padding-top: var(--space-sm); }
   .menu--compacto .menu__sello { opacity: 0; scale: 0.4; pointer-events: none; }
 }
@@ -1088,9 +1077,9 @@ a {
 
 /* En celular el menú es una sola fila que se desliza de lado */
 @media (max-width: 760px) {
-  .menu__sello { --d: 100px; padding: 17px 13px; top: 8px; }
+  .menu__sello { --d: 160px; top: 8px; }
   .menu__list {
-    padding-top: 118px;
+    padding-top: 108px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
