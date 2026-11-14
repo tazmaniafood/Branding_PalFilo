@@ -129,7 +129,7 @@ a {
 /* Las pestañas bajan y se abren a los lados del sello */
 .menu__list {
   display: grid;
-  grid-template-columns: 1fr 290px 1fr;
+  grid-template-columns: 1fr 380px 1fr;
   align-items: end;
   width: min(100% - 2 * var(--space-md), 1400px);
   min-height: 96px;
@@ -137,17 +137,17 @@ a {
   padding: var(--space-md) 0 var(--space-sm);
 }
 
-.menu__lado { display: flex; gap: 6px; }
+.menu__lado { display: flex; gap: 2px; align-items: flex-end; padding-bottom: 18px; }
 .menu__lado--izq { justify-content: flex-end; }
 .menu__lado--der { justify-content: flex-start; }
 
 /* El sello: un círculo de neón con los cuatro colores del faldón,
    colgado en el centro de la carpa, y el logo encendido adentro */
 .menu__sello {
-  --d: 270px;
+  --d: 360px;
   position: absolute;
   z-index: 2;
-  top: 14px;
+  top: 12px;
   left: 50%;
   translate: -50% 0;
   display: block;
@@ -159,22 +159,22 @@ a {
 .menu__sello:hover { transform: scale(1.04); }
 .menu__sello img { display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 14px rgb(13 9 25 / 0.7)); }
 
-@media (min-width: 1281px) {
-  .menu__list .menu__tab { font-size: 0.9rem; padding: 0.3rem 0.75rem; }
+@media (min-width: 1421px) {
+  .menu__list .menu__tab { font-size: 1rem; }
 }
 
 /* Pantallas medianas y celular: el sello arriba y una fila de
    pestañas que se desliza. Al bajar, el sello se guarda para que la
    carpa no ocupe media pantalla. */
-@media (max-width: 1280px) {
+@media (max-width: 1420px) {
   .menu__list {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: safe center;
     gap: 6px;
     width: 100%;
     min-height: 0;
-    padding: 128px var(--space-md) var(--space-sm);
+    padding: 158px var(--space-md) var(--space-sm);
     overflow-x: auto;
     scrollbar-width: none;
     transition: padding-top 0.25s var(--ease-out);
@@ -183,43 +183,57 @@ a {
   .menu__lado { display: contents; }
   .menu__hueco { display: none; }
   .menu__tab { flex-shrink: 0; }
-  .menu__sello { --d: 190px; transition: opacity 0.2s, scale 0.25s var(--ease-out); }
+  .menu__sello { --d: 240px; transition: opacity 0.2s, scale 0.25s var(--ease-out); }
   .menu--compacto .menu__list { padding-top: var(--space-sm); }
   .menu--compacto .menu__sello { opacity: 0; scale: 0.4; pointer-events: none; }
 }
 
-/* Pestañas: tranquilas para no competir con el titular. Letra crema,
-   borde crema tenue; solo la activa se enciende en neón mango. */
+/* Pestañas: letras de letrero sobre la carpa, sin cajas.
+   Lilita en crema con sombra para leerse sobre los azulejos; al pasar
+   se encienden, y la activa queda en neón mango con su ondita de faldón. */
 .menu__tab {
+  position: relative;
   display: block;
-  padding: 0.35rem 0.95rem;
+  padding: 0.35rem 0.7rem 0.6rem;
   color: var(--crema);
-  background: rgb(13 9 25 / 0.8);
+  background: none;
+  border: 0;
   font-family: var(--font-display);
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
   text-decoration: none;
-  border: 2px solid rgb(255 241 220 / 0.3);
-  border-radius: var(--radius-pill);
-  transition:
-    background var(--dur-fast) var(--ease-out),
-    border-color var(--dur-fast) var(--ease-out),
-    color var(--dur-fast) var(--ease-out),
-    box-shadow var(--dur-fast) var(--ease-out);
+  text-shadow: 0 2px 0 var(--noche), 0 0 10px rgb(13 9 25 / 0.95), 0 0 18px rgb(13 9 25 / 0.8);
+  transition: color var(--dur-fast) var(--ease-out), text-shadow var(--dur-fast) var(--ease-out);
+}
+
+.menu__tab::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 34px;
+  height: 9px;
+  translate: -50% 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 9'%3E%3Cpath d='M2 2 Q9.5 9 17 2 Q24.5 9 32 2' fill='none' stroke='%23FFC93C' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  filter: drop-shadow(0 0 4px var(--mango));
+  opacity: 0;
+  scale: 0.4 1;
+  transition: opacity var(--dur-fast) var(--ease-out), scale var(--dur-fast) var(--ease-pop);
 }
 
 .menu__tab:hover {
-  border-color: var(--mango);
-  color: var(--mango);
+  color: #FFF0B8;
+  text-shadow: 0 2px 0 var(--noche), 0 0 8px rgb(255 201 60 / 0.7), 0 0 18px rgb(13 9 25 / 0.8);
 }
 
 .menu__tab[aria-selected="true"] {
-  color: var(--noche);
-  background: var(--mango);
-  border-color: #FFF0B8;
-  box-shadow: var(--neon-mango);
+  color: var(--mango);
+  text-shadow: 0 2px 0 var(--noche), 0 0 6px rgb(255 201 60 / 0.9), 0 0 16px rgb(255 201 60 / 0.55);
 }
+
+.menu__tab[aria-selected="true"]::after { opacity: 1; scale: 1; }
 
 .menu__tab:active { transform: translateY(1px); }
 
@@ -1077,9 +1091,9 @@ a {
 
 /* En celular el menú es una sola fila que se desliza de lado */
 @media (max-width: 760px) {
-  .menu__sello { --d: 160px; top: 8px; }
+  .menu__sello { --d: 200px; top: 8px; }
   .menu__list {
-    padding-top: 108px;
+    padding-top: 132px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
