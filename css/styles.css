@@ -129,15 +129,15 @@ a {
 /* Las pestañas bajan y se abren a los lados del sello */
 .menu__list {
   display: grid;
-  grid-template-columns: 1fr 380px 1fr;
+  grid-template-columns: 1fr 400px 1fr;
   align-items: center;
-  width: min(100% - 2 * var(--space-md), 1400px);
-  min-height: 110px;
+  width: min(100% - 4rem, 1640px);
+  min-height: 120px;
   margin-inline: auto;
   padding: 0 0 var(--space-md);
 }
 
-.menu__lado { display: flex; gap: 6px; align-items: flex-start; align-self: center; }
+.menu__lado { display: flex; gap: 14px; align-items: flex-start; align-self: center; }
 .menu__lado--izq { justify-content: flex-end; }
 .menu__lado--der { justify-content: flex-start; }
 
@@ -159,19 +159,19 @@ a {
 .menu__sello:hover { transform: scale(1.04); }
 .menu__sello img { display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 14px rgb(13 9 25 / 0.7)); }
 
-@media (min-width: 1521px) {
+@media (min-width: 1561px) {
   .menu__list .menu__tab { font-size: 0.9rem; padding: 0.34rem 0.7rem 0.28rem; }
 }
 
 /* Pantallas medianas y celular: el sello arriba y una fila de
    pestañas que se desliza. Al bajar, el sello se guarda para que la
    carpa no ocupe media pantalla. */
-@media (max-width: 1520px) {
+@media (max-width: 1560px) {
   .menu__list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: safe center;
-    gap: 6px;
+    gap: 12px;
     width: 100%;
     min-height: 0;
     padding: 158px var(--space-md) var(--space-sm);
@@ -194,7 +194,7 @@ a {
 .menu__tab {
   position: relative;
   display: block;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 0.38rem 0.85rem 0.32rem;
   color: var(--crema);
   background: rgb(13 9 25 / 0.92);
@@ -207,7 +207,7 @@ a {
   letter-spacing: 0.05em;
   white-space: nowrap;
   text-decoration: none;
-  transform-origin: 50% -20px;
+  transform-origin: 50% -30px;
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), rotate 0.3s var(--ease-pop);
 }
 
@@ -218,7 +218,7 @@ a {
   left: 50%;
   bottom: 100%;
   width: 2px;
-  height: 20px;
+  height: 30px;
   translate: -50% 0;
   background: linear-gradient(rgb(255 241 220 / 0.15), rgb(255 241 220 / 0.55));
 }
@@ -248,6 +248,19 @@ a {
   border-color: #FFF0B8;
   box-shadow: 0 4px 0 rgb(13 9 25 / 0.8), 0 0 10px rgb(255 201 60 / 0.65), 0 0 22px rgb(255 201 60 / 0.35);
   rotate: 2deg;
+}
+
+@keyframes columpio {
+  0% { rotate: 0deg; }
+  20% { rotate: 14deg; }
+  40% { rotate: -9deg; }
+  60% { rotate: 6deg; }
+  78% { rotate: -2deg; }
+  100% { rotate: 2deg; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .menu__tab[aria-selected="true"] { animation: columpio 0.9s var(--ease-out) both; }
 }
 
 .menu__tab[aria-selected="true"]::before { background: linear-gradient(rgb(255 201 60 / 0.2), var(--mango)); }
@@ -400,9 +413,9 @@ a {
     "izq titulo der"
     "pie pie pie";
   align-items: center;
-  column-gap: var(--space-lg);
+  column-gap: var(--space-md);
   row-gap: var(--space-lg);
-  padding: calc(var(--space-2xl) + 70px) max(var(--space-md), (100% - 1240px) / 2) var(--space-xl);
+  padding: calc(var(--space-2xl) + 70px) max(var(--space-md), (100% - 1560px) / 2) var(--space-xl);
   text-align: center;
 }
 
@@ -434,13 +447,13 @@ a {
 
 .cartel__figura {
   width: 100%;
-  max-width: 280px;
+  max-width: 440px;
   height: auto;
   pointer-events: none;
 }
 
-.cartel__figura--izq { grid-area: izq; justify-self: end; rotate: -6deg; }
-.cartel__figura--der { grid-area: der; justify-self: start; rotate: 6deg; }
+.cartel__figura--izq { grid-area: izq; justify-self: center; rotate: -6deg; }
+.cartel__figura--der { grid-area: der; justify-self: center; rotate: 6deg; }
 
 .cartel__pie {
   grid-area: pie;
@@ -473,7 +486,7 @@ a {
     padding: calc(var(--space-xl) + 40px) var(--space-md) var(--space-xl);
   }
 
-  .cartel__figura { max-width: 150px; }
+  .cartel__figura { max-width: 170px; }
 }
 
 /* Carrusel: las figuras se turnan encendiéndose y apagándose */
