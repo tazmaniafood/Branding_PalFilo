@@ -7,8 +7,8 @@
   <meta name="description" content="Guía de identidad de la comida rápida costeña en San José, California, inspirada en las noches de Carnaval de la Costa. Nombre provisional: TAZ.">
   <meta name="theme-color" content="#0D0919">
   <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="stylesheet" href="css/tokens.css?v=8.1">
-  <link rel="stylesheet" href="css/styles.css?v=8.1">
+  <link rel="stylesheet" href="css/tokens.css?v=9.0">
+  <link rel="stylesheet" href="css/styles.css?v=9.0">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -25,6 +25,7 @@
       </div>
       <span class="menu__hueco" aria-hidden="true"></span>
       <div class="menu__lado menu__lado--der" role="presentation">
+        <a class="menu__tab" href="#menu" role="tab" id="tab-menu" aria-controls="menu" aria-selected="false" tabindex="-1" data-action="show-section" data-target="menu">El menú</a>
         <a class="menu__tab" href="#identidad" role="tab" id="tab-identidad" aria-controls="identidad" aria-selected="false" tabindex="-1" data-action="show-section" data-target="identidad">Identidad</a>
         <a class="menu__tab" href="#aplicaciones" role="tab" id="tab-aplicaciones" aria-controls="aplicaciones" aria-selected="false" tabindex="-1" data-action="show-section" data-target="aplicaciones">Aplicaciones</a>
         <a class="menu__tab" href="#redes" role="tab" id="tab-redes" aria-controls="redes" aria-selected="false" tabindex="-1" data-action="show-section" data-target="redes">Redes</a>
@@ -33,25 +34,24 @@
     </div>
     <!-- El sello: el logo encendido en el centro de la carpa. Nombre provisional. -->
     <a class="menu__sello" href="#alma" data-action="show-section" data-target="alma" aria-label="Ir al inicio">
-      <img src="img/logo/principal.png?v=8.0" alt="Pa'l Filo, Colombian street food" width="1400" height="1159">
+      <img src="img/logo/principal.png?v=9.0" alt="Pa'l Filo, Colombian street food" width="1400" height="1159">
     </a>
   </nav>
 
   <!-- ===================== PORTADA: el cartel ===================== -->
   <header class="cartel">
     <!-- El titular centrado bajo el logo, con una figura de Carnaval a cada lado -->
-    <img class="cartel__figura cartel__figura--izq" src="img/torito-neon.svg?v=8.0" alt="" width="1254" height="1144">
-    <h1 class="letrero cartel__titulo">
-      <span class="cartel__linea" style="--n: var(--mango);">Rebosao,</span>
-      <span class="cartel__linea" style="--n: var(--tomate);">mamagallista</span>
-      <span class="cartel__linea" style="--n: var(--cian);">y de pura cepa</span>
+    <img class="cartel__figura cartel__figura--izq cartel__figura--comida" src="img/salchipapa.svg?v=9.0" alt="" width="740" height="490">
+    <h1 class="letrero cartel__titulo cartel__titulo--filo">
+      <span class="cartel__linea" style="--n: var(--mango);">¿Tienes</span>
+      <span class="cartel__linea" style="--n: var(--cian);">filo?</span>
     </h1>
-    <img class="cartel__figura cartel__figura--der" src="img/marimonda-neon.svg?v=8.0" alt="" width="1452" height="1116">
+    <img class="cartel__figura cartel__figura--der cartel__figura--comida" src="img/pizza.svg?v=9.0" alt="" width="500" height="540">
 
     <div class="cartel__pie">
-      <p class="cartel__bajada">Comida rápida costeña en San José, California. Esta es su guía de marca: cómo somos, cómo hablamos y cómo nos vemos.</p>
-      <a class="btn" href="#valores" data-action="show-section" data-target="valores">Ver los valores</a>
-      <p class="cartel__nota">Borrador 8.0: sistema de logo Pa'l Filo.</p>
+      <p class="cartel__bajada">Salchicosteñas cargadas, pizza de barrio y salsa por encima: la comida rápida de la calle costeña, en San José, California. Esta es la guía interna de la marca.</p>
+      <a class="btn" href="#menu" data-action="show-section" data-target="menu">Ver el menú</a>
+      <p class="cartel__nota">Borrador 9.0: la calle de la Costa.</p>
     </div>
   </header>
 
@@ -63,20 +63,24 @@
     <section class="chapter" id="alma" role="tabpanel" aria-labelledby="tab-alma" tabindex="-1" style="--n: var(--mango);">
       <header class="chapter__head">
         <h2 class="letrero chapter__title">El alma</h2>
-        <p class="chapter__intro">Todo lo que hacemos pasa por una pregunta: <strong>¿esto se siente costeño?</strong></p>
+        <p class="chapter__intro">Todo lo que hacemos pasa por una pregunta: <strong>¿esto sabe a la esquina de la Costa?</strong></p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
 
-      <p class="manifiesto">Que nadie se sienta lejos de casa a la hora de comer.</p>
+      <p class="manifiesto">La comida rápida de la calle costeña: rebosada, con salsa por encima y para quitarte el filo.</p>
 
-      <div class="columnas columnas--3">
+      <div class="columnas columnas--2">
         <article class="nota">
           <h3>Quiénes somos</h3>
-          <p>Costeños de la Costa Caribe colombiana que se mudaron a Estados Unidos y que siempre cocinaron y se destacaron allá. Traemos la comida rápida costeña a San José como se hace en casa.</p>
+          <p>Costeños de la Costa Caribe colombiana que se mudaron a Estados Unidos y que siempre cocinaron y se destacaron allá. Traemos la comida rápida de la esquina costeña a San José, como se hace allá.</p>
+        </article>
+        <article class="nota">
+          <h3>Qué vendemos</h3>
+          <p>Salchicosteñas y pizza de barrio, más perros, burguers y mazorcada. Todo se arma al gusto, con harta salsa. La pizza es la que más sale; la salchicosteña es la que nadie más tiene.</p>
         </article>
         <article class="nota">
           <h3>Para quién y por qué</h3>
-          <p>Para latinos y curiosos que extrañan o quieren descubrir la comida de verdad. Todo rebosao, con salsas hechas en casa, porque en la Costa nadie se queda con hambre.</p>
+          <p>Hoy nos compra el latino; a quien vamos es al gringo, que es el que más compra en su país. Por eso la marca habla los dos idiomas y explica sin perder el acento.</p>
         </article>
         <article class="nota">
           <h3>El cambio de mirada</h3>
@@ -212,8 +216,8 @@
           </div>
           <div class="chat" id="chat" role="tabpanel" aria-labelledby="tab-costeno">
             <div class="chat__bar">
-              <span class="chat__avatar" aria-hidden="true">T</span>
-              <span class="chat__name">TAZ<span class="chat__online">en línea</span></span>
+              <span class="chat__avatar" aria-hidden="true">P'F</span>
+              <span class="chat__name">Pa'l Filo<span class="chat__online">en línea</span></span>
             </div>
             <div class="chat__thread">
               <p class="bubble bubble--in" data-slot="question">¿Ya va saliendo mi pedido?</p>
@@ -235,6 +239,22 @@
           <p class="voice__why">"Barato" nos devuelve al aura de pobreza del fast food, y "gourmet" no somos nosotros. Las groserías tampoco van: es una marca para familias.</p>
         </div>
       </div>
+
+      <h3 class="letrero sub" style="--n: var(--cian);">Dos idiomas, una voz</h3>
+      <div class="columnas columnas--3">
+        <article class="nota">
+          <h3>Saber a quién le hablamos</h3>
+          <p>La web y las apps abren en el idioma del teléfono del cliente. En WhatsApp contestamos en el idioma en que nos escriben. Las piezas para todos van en inglés con la palabra costeña a la vista.</p>
+        </article>
+        <article class="nota">
+          <h3>Al latino, en español</h3>
+          <p>Español costeño completo: "¡Eche, ya va saliendo eso rebosao!". No se traduce ni se explica.</p>
+        </article>
+        <article class="nota">
+          <h3>Al gringo, en inglés con sabor</h3>
+          <p>Inglés claro y la palabra costeña como gancho, explicada una vez: <em>"Hungry? We got filo. Filo (n.): Colombian for starving."</em></p>
+        </article>
+      </div>
     </section>
 
     <!-- ===================== PÚBLICOS ===================== -->
@@ -246,29 +266,90 @@
       </header>
 
       <div class="columnas columnas--3">
+        <article class="nota" style="--n: var(--tomate);">
+          <p class="nota__rol">Nos compra hoy</p>
+          <h3>El latino</h3>
+          <p><strong>Busca</strong> sabor de su tierra o de la tierra vecina, y una comida rápida distinta. <strong>Teme</strong> que sea más de lo mismo. <strong>Le damos</strong> la esquina costeña en español, sin explicar de más.</p>
+        </article>
+        <article class="nota" style="--n: var(--cian);">
+          <p class="nota__rol">A quien vamos</p>
+          <h3>El gringo</h3>
+          <p><strong>Busca</strong> algo nuevo que valga la pena contar. <strong>Teme</strong> no saber qué pedir. <strong>Le damos</strong> inglés claro, una línea que explica cada plato y la palabra costeña como sabor.</p>
+        </article>
         <article class="nota" style="--n: var(--mango);">
           <p class="nota__rol">Nos valida</p>
           <h3>El costeño</h3>
-          <p><strong>Busca</strong> volver a su tierra por un rato. <strong>Teme</strong> que sea costeño de mentiras. <strong>Le damos</strong> el sabor de allá, sin adaptar nada.</p>
+          <p><strong>Busca</strong> volver a su tierra por un rato. <strong>Teme</strong> que sea costeño de mentiras. <strong>Le damos</strong> el sabor de allá, sin adaptar nada. Si él lo aprueba, el resto confía.</p>
         </article>
-        <article class="nota" style="--n: var(--tomate);">
-          <p class="nota__rol">Nos llena la cocina</p>
-          <h3>El latino</h3>
-          <p><strong>Busca</strong> sabor latino auténtico, distinto a lo de siempre. <strong>Teme</strong> que sea más de lo mismo. <strong>Le damos</strong> la Costa con algo familiar.</p>
+      </div>
+    </section>
+
+    <!-- ===================== EL MENÚ ===================== -->
+    <section class="chapter" id="menu" role="tabpanel" aria-labelledby="tab-menu" tabindex="-1" style="--n: var(--mango);">
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">El menú</h2>
+        <p class="chapter__intro">La marca se construye sobre lo que la gente pide. La pizza nos llena la caja; la salchicosteña nos hace únicos.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
+
+      <div class="heroes">
+        <article class="heroe">
+          <img src="img/salchipapa.svg?v=9.0" alt="">
+          <p class="nota__rol">La bandera</p>
+          <h3 class="letrero" style="--n: var(--mango);">Salchicosteña</h3>
+          <p>Lo que nadie más tiene en San José. Va primero en la portada, en el truck y en las fotos. La más pedida es la Californiana.</p>
+          <p class="heroe__en">Colombian loaded fries: fries, sausage, chicken, beef, corn, cheese and our sauces on top.</p>
         </article>
-        <article class="nota" style="--n: var(--lima);">
-          <p class="nota__rol">Nos hace crecer</p>
-          <h3>El gringo</h3>
-          <p><strong>Busca</strong> una experiencia nueva. <strong>Teme</strong> no saber qué pedir. <strong>Le damos</strong> una guía amable: te explicamos y te recomendamos.</p>
+        <article class="heroe">
+          <img src="img/pizza.svg?v=9.0" alt="">
+          <p class="nota__rol">La que más sale</p>
+          <h3 class="letrero" style="--n: var(--tomate);">Pizza de barrio</h3>
+          <p>La pizza como se come en la Costa: cargada, dulce con salado y con borde de bocadillo. Las que más salen: Hawaiana y la de champiñones.</p>
+          <p class="heroe__en">Colombian neighborhood pizza: loaded, sweet meets savory, with a guava-paste crust.</p>
         </article>
+      </div>
+
+      <h3 class="letrero sub" style="--n: var(--cian);">Nombres nuevos</h3>
+      <p class="chapter__intro">Propuesta. Los nombres salen de la calle y de la jerga costeña, y cada plato lleva una línea en inglés para el que no la conoce.</p>
+      <div class="tabla-wrap">
+      <table class="nombres">
+        <thead><tr><th scope="col">Antes</th><th scope="col">Ahora</th><th scope="col">Para el gringo</th></tr></thead>
+        <tbody>
+          <tr class="grupo"><th colspan="3" scope="rowgroup">Salchicosteñas</th></tr>
+          <tr><td>Salchi Californiana</td><td><b>La Pa'l Filo</b></td><td>Our classic loaded fries. Start here.</td></tr>
+          <tr><td>Salchi Tazmania</td><td><b>La Rebosá</b></td><td>The classic, plus shrimp and bacon. Overflowing.</td></tr>
+          <tr class="grupo"><th colspan="3" scope="rowgroup">Pizzas</th></tr>
+          <tr><td>Hawaiana</td><td><b>La Caribeña</b></td><td>Pineapple, ham and cherry. Our Hawaiian.</td></tr>
+          <tr><td>Ay Dios Mío</td><td><b>¡Ay, Dios Mío!</b> (se queda)</td><td>Chicken, mushrooms and house sauce. Yes, it's that good.</td></tr>
+          <tr><td>Pepperoni</td><td><b>La de Siempre</b></td><td>Pepperoni, ham and cheese.</td></tr>
+          <tr><td>Tropical</td><td><b>La Golosa</b></td><td>Pineapple, peach and cherry: sweet tooth approved.</td></tr>
+          <tr><td>Californiana</td><td><b>La del Malecón</b></td><td>Chicken, shrimp, mushrooms and peppers.</td></tr>
+          <tr><td>Camarones</td><td><b>La de Bocagrande</b></td><td>Shrimp, ham and house sauce.</td></tr>
+          <tr><td>Mexicana</td><td><b>La Enchilá</b></td><td>Shredded beef, bacon and spicy house sauce.</td></tr>
+          <tr><td>La 4K</td><td><b>La Parrandera</b></td><td>Every meat we have. Bring friends.</td></tr>
+          <tr><td>Legendaria</td><td><b>La Picotera</b></td><td>Ground beef, corn, bacon and peppers.</td></tr>
+          <tr><td>Pizza a tu gusto</td><td><b>Ármala tú</b></td><td>Build your own.</td></tr>
+          <tr class="grupo"><th colspan="3" scope="rowgroup">Lo demás</th></tr>
+          <tr><td>Mazorcada TAZ</td><td><b>La Mazorcada de la Esquina</b></td><td>Sweet corn, chicken and beef, cheese and sauces.</td></tr>
+          <tr><td>Perro caliente</td><td><b>Perro Callejero</b></td><td>Colombian street hot dog, fully loaded.</td></tr>
+          <tr><td>Burguer</td><td><b>Burguer de Barrio</b></td><td>Our burger, built your way.</td></tr>
+          <tr><td>Salsa TAZ</td><td><b>Salsa Pa'l Filo</b></td><td>Our secret house sauce.</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3 class="letrero sub" style="--n: var(--tomate);">Las salsas son la firma</h3>
+      <div class="salsas">
+        <img src="img/salsa-rosada.svg?v=9.0" alt="Salsa rosada"><img src="img/salsa-verde.svg?v=9.0" alt="Salsa verde"><img src="img/salsa-casa.svg?v=9.0" alt="Salsa Pa'l Filo">
+        <p>Siete salsas y un gesto: el chorro en zigzag por encima. Es el mismo dibujo del faldón de la carpa, y por eso es la seña de la marca. Rosada, verde, BBQ, tomate, chile, tocino y la Pa'l Filo de la casa.</p>
       </div>
     </section>
 
     <!-- ===================== IDENTIDAD ===================== -->
     <section class="chapter" id="identidad" role="tabpanel" aria-labelledby="tab-identidad" tabindex="-1" style="--n: var(--lima);">
       <header class="chapter__head">
-        <h2 class="letrero chapter__title">Noche de Carnaval</h2>
-        <p class="chapter__intro">La marca es un letrero de neón encendido en una noche de Carnaval, debajo de la carpa del carrito de comida. Lo que brilla es lo importante; lo demás se queda quieto y oscuro para que brille más. Son seis reglas.</p>
+        <h2 class="letrero chapter__title">La calle de la Costa</h2>
+        <p class="chapter__intro">La marca es el carrito de la esquina de noche: letrero pintado, picó sonando, bombillos y la salsa cayendo. Lo que brilla es la comida y el nombre; lo demás se queda quieto. Son seis reglas.</p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
 
@@ -277,35 +358,35 @@
           <div class="regla__demo regla__demo--noche" aria-hidden="true"></div>
           <div>
             <h3>La noche</h3>
-            <p>El Carnaval se vive de noche. Todo va sobre noche morada, nunca sobre blanco.</p>
+            <p>Vendemos de noche, y la marca vive sobre noche morada. Para la comida en apps y empaques también se puede usar fondo mango o crema.</p>
           </div>
         </li>
         <li class="regla">
-          <div class="regla__demo regla__demo--paleta" aria-hidden="true"><span style="--n: var(--mango);"></span><span style="--n: var(--tomate);"></span><span style="--n: var(--cian);"></span><span style="--n: var(--naranja);"></span><span style="--n: var(--morado);"></span><span style="--n: var(--lima);"></span></div>
+          <div class="regla__demo regla__demo--paleta" aria-hidden="true"><span style="--n: var(--crema);"></span><span style="--n: var(--mango);"></span><span style="--n: var(--tomate);"></span><span style="--n: var(--cian);" class="is-acento"></span></div>
           <div>
-            <h3>Seis neones</h3>
-            <p>Mango, tomate y cian para títulos y botones. Naranja, morado y lima para figuras y detalles. Uno por título, nunca dos en la misma palabra.</p>
+            <h3>Tres colores y un acento</h3>
+            <p>Sobre noche: crema, mango y tomate hacen todo el trabajo. Cian es el acento, uno por pieza. Uva solo para sombras y lima solo para confirmar y WhatsApp.</p>
           </div>
         </li>
         <li class="regla">
           <div class="regla__demo" aria-hidden="true"><span class="letrero regla__letra" style="--n: var(--mango);">Ajá</span></div>
           <div>
-            <h3>Letra picotera de neón</h3>
-            <p>La letra picotera encendida: Lilita One en mayúsculas, relleno de color, contorno crema, sombra uva y brillo de neón. Solo para títulos.</p>
+            <h3>Letra de picó</h3>
+            <p>Como los letreros pintados de los picós y los carritos: Lilita One en mayúsculas, relleno de color, contorno crema y sombra uva en bloque. Solo para títulos.</p>
           </div>
         </li>
         <li class="regla">
-          <div class="regla__demo regla__demo--figuras" aria-hidden="true"><img src="img/sombrero-vueltiao-neon.svg?v=8.0" alt=""><img src="img/marimonda-neon.svg?v=8.0" alt=""><img src="img/torito-neon.svg?v=8.0" alt=""></div>
+          <div class="regla__demo regla__demo--figuras" aria-hidden="true"><img src="img/salchipapa.svg?v=9.0" alt="" style="width:50%"><img src="img/pizza.svg?v=9.0" alt="" style="width:36%"></div>
           <div>
-            <h3>Figuras de Carnaval</h3>
-            <p>El sombrero vueltiao, la Marimonda y el torito, dibujados en neón. Acompañan al logo: viven en el ambiente, nunca dentro del logo.</p>
+            <h3>La comida manda</h3>
+            <p>La salchicosteña y la pizza, dibujadas como sticker de letrero o en foto llenando el cuadro. Donde antes iba una figura, ahora va un plato. El torito, la Marimonda y el sombrero quedan para la temporada de Carnaval y la decoración del local.</p>
           </div>
         </li>
         <li class="regla">
           <div class="regla__demo regla__demo--carpa" aria-hidden="true"></div>
           <div>
-            <h3>La carpa</h3>
-            <p>Arriba y abajo, la carpa del carrito: azulejos costeños de neón y un faldón de ondas en neón que alternan mango, cian, lima y tomate. Es el marco de todo.</p>
+            <h3>El chorro de salsa</h3>
+            <p>El faldón de ondas de la carpa es la salsa cayendo en zigzag. Va arriba y abajo como marco, en los empaques como troquel y sobre la comida como gesto. Es la seña que se reconoce sin ver el logo.</p>
           </div>
         </li>
         <li class="regla">
@@ -320,26 +401,24 @@
       <h3 class="letrero sub" style="--n: var(--cian);">El logo</h3>
       <p class="chapter__intro">Pa'l Filo es un sticker de letrero: Lilita inclinada, contorno crema, relieve uva y la placa roja. El neón vive en el ambiente, no en el logo. El apóstrofe rojo es la firma.</p>
       <ul class="logos">
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/principal.png?v=8.0" alt="Logo principal"></div><h3>Principal</h3><p>Letrero, portada y redes. Relieve profundo, sobre noche.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/horizontal.png?v=8.3" alt="Logo horizontal"></div><h3>Horizontal</h3><p>Espacios bajos: header web, recibos, cajón de domicilio.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/simple.png?v=8.3" alt="Logo simple"></div><h3>Simple</h3><p>Tamaños pequeños. Una sola sombra.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo logo-uso__demo--claro"><img src="img/logo/fondo-claro.png?v=8.0" alt="Logo para fondo claro"></div><h3>Fondo claro</h3><p>Cajas, vasos y papel blanco. Contorno noche en vez de crema.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/una-tinta.png?v=8.0" alt="Logo a una tinta"></div><h3>Una tinta</h3><p>Sellos, kraft, vinilo, bordado. Un solo color, sin efectos.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/icono.png?v=8.0" alt="Ícono P'F"></div><h3>Ícono</h3><p>DoorDash, Instagram, app y favicon. P cian, apóstrofe tomate, F mango, como en el nombre.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/principal.png?v=9.0" alt="Logo principal"></div><h3>Principal</h3><p>Letrero, portada y redes. Relieve profundo, sobre noche.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/horizontal.png?v=9.0" alt="Logo horizontal"></div><h3>Horizontal</h3><p>Espacios bajos: header web, recibos, cajón de domicilio.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/simple.png?v=9.0" alt="Logo simple"></div><h3>Simple</h3><p>Tamaños pequeños. Una sola sombra.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo logo-uso__demo--claro"><img src="img/logo/fondo-claro.png?v=9.0" alt="Logo para fondo claro"></div><h3>Fondo claro</h3><p>Cajas, vasos y papel blanco. Contorno noche en vez de crema.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/una-tinta.png?v=9.0" alt="Logo a una tinta"></div><h3>Una tinta</h3><p>Sellos, kraft, vinilo, bordado. Un solo color, sin efectos.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/icono.png?v=9.0" alt="Ícono P'F"></div><h3>Ícono</h3><p>DoorDash, Instagram, app y favicon. P cian, apóstrofe tomate, F mango, como en el nombre.</p></li>
       </ul>
       <p class="hint">Tamaño mínimo: 120 px de ancho para el principal; debajo de eso, el simple o el ícono. Espacio libre alrededor: la altura de la placa.</p>
 
       <h3 class="letrero sub" style="--n: var(--mango);">Colores</h3>
       <ul class="swatches">
         <li><button class="swatch" type="button" data-action="copy-color" data-hex="#0D0919" data-name="Noche"><span class="swatch__chip" style="background:#0D0919;"></span><span class="swatch__name">Noche</span><span class="swatch__role">Fondo, noche morada</span><span class="swatch__hex">#0D0919</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#5B0DA8" data-name="Uva"><span class="swatch__chip" style="background:#5B0DA8;"></span><span class="swatch__name">Uva</span><span class="swatch__role">Paneles y sombras</span><span class="swatch__hex">#5B0DA8</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#5B0DA8" data-name="Uva"><span class="swatch__chip" style="background:#5B0DA8;"></span><span class="swatch__name">Uva</span><span class="swatch__role">Solo sombras y relieve</span><span class="swatch__hex">#5B0DA8</span></button></li>
         <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FFF1DC" data-name="Crema"><span class="swatch__chip" style="background:#FFF1DC;"></span><span class="swatch__name">Crema</span><span class="swatch__role">Texto y contorno</span><span class="swatch__hex">#FFF1DC</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FFB700" data-name="Mango"><span class="swatch__chip" style="background:#FFB700;"></span><span class="swatch__name">Mango</span><span class="swatch__role">Lo principal: botones y faldón</span><span class="swatch__hex">#FFB700</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FF2440" data-name="Tomate"><span class="swatch__chip" style="background:#FF2440;"></span><span class="swatch__name">Tomate</span><span class="swatch__role">Neón rojo, títulos</span><span class="swatch__hex">#FF2440</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#00B9FF" data-name="Cian"><span class="swatch__chip" style="background:#00B9FF;"></span><span class="swatch__name">Cian</span><span class="swatch__role">Neón cian, títulos</span><span class="swatch__hex">#00B9FF</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FF8A2B" data-name="Naranja"><span class="swatch__chip" style="background:#FF8A2B;"></span><span class="swatch__name">Naranja</span><span class="swatch__role">Neón ámbar, figuras</span><span class="swatch__hex">#FF8A2B</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#B455FF" data-name="Morado"><span class="swatch__chip" style="background:#B455FF;"></span><span class="swatch__name">Morado</span><span class="swatch__role">Neón morado, figuras</span><span class="swatch__hex">#B455FF</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#7CFF6B" data-name="Lima"><span class="swatch__chip" style="background:#7CFF6B;"></span><span class="swatch__name">Lima</span><span class="swatch__role">Confirmar y WhatsApp</span><span class="swatch__hex">#7CFF6B</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FFB700" data-name="Mango"><span class="swatch__chip" style="background:#FFB700;"></span><span class="swatch__name">Mango</span><span class="swatch__role">Principal: FILO, botones</span><span class="swatch__hex">#FFB700</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FF2440" data-name="Tomate"><span class="swatch__chip" style="background:#FF2440;"></span><span class="swatch__name">Tomate</span><span class="swatch__role">Principal: placa, apóstrofe, promos</span><span class="swatch__hex">#FF2440</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#00B9FF" data-name="Cian"><span class="swatch__chip" style="background:#00B9FF;"></span><span class="swatch__name">Cian</span><span class="swatch__role">Acento: PA'L, un toque por pieza</span><span class="swatch__hex">#00B9FF</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#7CFF6B" data-name="Lima"><span class="swatch__chip" style="background:#7CFF6B;"></span><span class="swatch__name">Lima</span><span class="swatch__role">Solo confirmar y WhatsApp</span><span class="swatch__hex">#7CFF6B</span></button></li>
       </ul>
       <p class="hint">Toca un color para copiar su código.</p>
 
@@ -348,7 +427,7 @@
         <article class="nota specimen">
           <p class="letrero specimen__big" style="--n: var(--mango);" aria-hidden="true">Aa</p>
           <h3>Lilita One</h3>
-          <p>Para títulos, siempre como letrero de neón y en mayúsculas.</p>
+          <p>Para títulos, siempre como letrero de picó y en mayúsculas.</p>
         </article>
         <article class="nota specimen">
           <p class="specimen__big specimen__big--body" aria-hidden="true">Aa</p>
@@ -362,16 +441,16 @@
     <section class="chapter" id="aplicaciones" role="tabpanel" aria-labelledby="tab-aplicaciones" tabindex="-1" style="--n: var(--mango);">
       <header class="chapter__head">
         <h2 class="letrero chapter__title">Así se ve</h2>
-        <p class="chapter__intro">Tres piezas hechas con las seis reglas. Si parecen de la misma noche, funciona.</p>
+        <p class="chapter__intro">Tres piezas hechas con las seis reglas. Si en tres segundos se entiende qué vendemos, funciona.</p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
 
       <div class="apps">
         <figure class="app">
           <div class="poster">
-            <img class="poster__figura" src="img/torito-neon.svg?v=8.0" alt="">
-            <p class="letrero poster__titulo" style="--n: var(--mango);">Perro rebosao</p>
-            <p class="poster__texto">Este viernes, con harta salsa de la casa.</p>
+            <img class="poster__figura" src="img/salchipapa.svg?v=9.0" alt="">
+            <p class="letrero poster__titulo" style="--n: var(--mango);">La Rebosá</p>
+            <p class="poster__texto">Salchicosteña con camarones y tocineta. Con harta salsa Pa'l Filo.</p>
             <span class="poster__cta">Pídelo por WhatsApp</span>
           </div>
           <figcaption>Post de Instagram</figcaption>
@@ -380,12 +459,12 @@
         <figure class="app">
           <div class="listing">
             <div class="listing__cover">
-              <img src="img/sombrero-vueltiao-neon.svg?v=8.0" alt="">
+              <img src="img/pizza.svg?v=9.0" alt="">
             </div>
             <div class="listing__info">
-              <p class="listing__name">TAZ</p>
+              <p class="listing__name">Pa'l Filo</p>
               <p class="listing__tag">Colombian street food</p>
-              <p class="listing__desc">Costeño street food from Colombia's Caribbean coast. Homemade sauces, generous portions, made like back home.</p>
+              <p class="listing__desc">Colombian street food: loaded salchipapas, neighborhood-style pizza and homemade sauces on top. Hungry? We got filo.</p>
             </div>
           </div>
           <figcaption>Ficha en DoorDash</figcaption>
@@ -404,7 +483,7 @@
     <section class="chapter" id="redes" role="tabpanel" aria-labelledby="tab-redes" tabindex="-1" style="--n: var(--tomate);">
       <header class="chapter__head">
         <h2 class="letrero chapter__title">Dónde hablamos</h2>
-        <p class="chapter__intro">TikTok descubre, Instagram enamora, Facebook reúne y WhatsApp vende. De cada cuatro o cinco publicaciones, solo una vende directamente.</p>
+        <p class="chapter__intro">TikTok descubre, Instagram enamora, Facebook reúne y WhatsApp vende. Hoy casi todo entra por WhatsApp; DoorDash vuelve cuando se resuelva la cuenta.</p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
 
@@ -412,7 +491,7 @@
         <article class="nota" style="--n: var(--mango);">
           <p class="nota__rol">Volumen</p>
           <h3>TikTok</h3>
-          <p>Humor costeño, tendencias y la salsa cayendo. De cuatro a siete videos por semana.</p>
+          <p>La salchicosteña armándose y la salsa cayendo, con humor costeño. De cuatro a siete videos por semana.</p>
         </article>
         <article class="nota" style="--n: var(--tomate);">
           <p class="nota__rol">Vitrina</p>
@@ -427,7 +506,7 @@
         <article class="nota" style="--n: var(--mango);">
           <p class="nota__rol">Venta</p>
           <h3>WhatsApp</h3>
-          <p>Catálogo, mensajes automáticos y el especial de la semana a los clientes.</p>
+          <p>El canal que hoy vende, atendido a mano. Siguiente paso: catálogo, respuestas rápidas en los dos idiomas y el especial de la semana.</p>
         </article>
       </div>
     </section>
@@ -440,14 +519,14 @@
       </header>
       <ul class="todo">
         <li data-state="done">Alma, valores, personalidad y voz</li>
-        <li data-state="done">Públicos y redes</li>
-        <li data-state="review">Identidad visual 6.0 "Noche de Carnaval": validar</li>
-        <li>Nombre definitivo</li>
+        <li data-state="done">Públicos, redes y voz en dos idiomas</li>
+        <li data-state="done">Nombre: Pa'l Filo, con sistema de logo</li>
+        <li data-state="review">Identidad 9.0 "La calle de la Costa": validar</li>
+        <li data-state="review">Nombres nuevos de los platos: validar</li>
+        <li>Fotos reales de la salchicosteña y la pizza con la guía de fondo, luz y ángulo</li>
         <li>Historia de origen: quién cocina y por qué lo buscaban en la Costa</li>
-        <li>Plato costeño insignia</li>
-        <li data-state="review">Sistema de logo Pa'l Filo: validar</li>
         <li>Revisar marca registrada en San José y asegurar @palfilo y palfilo.com</li>
-        <li>Aplicar la marca a la web, los empaques y DoorDash</li>
+        <li>Aplicar la marca a la web del consumidor, los empaques y DoorDash</li>
       </ul>
     </section>
 
@@ -456,12 +535,12 @@
   <footer class="footer">
     <div class="footer__placa">
       <p class="letrero footer__line" style="--n: var(--mango);">¡Coma que hay más!</p>
-      <p class="footer__meta">Guía de marca, borrador 6.8. San José, California.</p>
+      <p class="footer__meta">Guía de marca, borrador 9.0. San José, California.</p>
     </div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/main.js?v=8.0" defer></script>
+  <script src="js/main.js?v=9.0" defer></script>
 </body>
 </html>

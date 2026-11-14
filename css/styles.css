@@ -1161,3 +1161,42 @@ a {
   background:var(--panel); border:1px solid var(--linea-suave); }
 .logo-uso__demo--claro { background:#FFFFFF; }
 .logo-uso__demo img { max-width:100%; max-height:100%; object-fit:contain; }
+
+/* ==========================================================
+   9.0: LA CALLE DE LA COSTA
+   ========================================================== */
+.cartel__figura--comida { filter: drop-shadow(0 0 40px rgb(255 183 0 / 0.18)); }
+
+/* Platos héroe */
+.heroes { display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); margin-block: var(--space-md); }
+.heroe { padding: var(--space-md); border-radius: 18px; background: var(--panel); border: 1px solid var(--linea-suave); }
+.heroe img { display: block; width: min(100%, 320px); height: 230px; object-fit: contain; margin: 0 auto var(--space-sm); }
+.heroe h3.letrero { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0.2rem 0 0.6rem; }
+.heroe p { margin: 0 0 0.6rem; }
+.heroe__en { color: var(--cian); font-style: italic; }
+
+/* Tabla de nombres */
+.tabla-wrap { overflow-x: auto; margin-block: var(--space-sm) var(--space-md); }
+.nombres { width: 100%; border-collapse: collapse; min-width: 560px; }
+.nombres th, .nombres td { text-align: left; padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--linea-suave); vertical-align: top; }
+.nombres thead th { font-weight: 900; color: var(--mango); }
+.nombres td:first-child { color: var(--gris, #b9b0c8); text-decoration: line-through; text-decoration-color: rgb(255 36 64 / 0.6); }
+.nombres td b { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; color: var(--crema); letter-spacing: 0.01em; }
+.nombres td:last-child { font-style: italic; color: #CFE9FF; }
+.nombres .grupo th { padding-top: 1.2rem; color: var(--tomate); font-weight: 900; border-bottom: 2px solid var(--tomate); }
+
+/* Salsas */
+.salsas { display: grid; grid-template-columns: repeat(3, minmax(60px, 110px)) 1fr; gap: var(--space-sm); align-items: end; margin-block: var(--space-md); }
+.salsas img { width: 100%; height: auto; }
+.salsas p { align-self: center; padding-left: var(--space-sm); }
+@media (max-width: 760px) {
+  .salsas { grid-template-columns: repeat(3, 1fr); }
+  .salsas p { grid-column: 1 / -1; padding-left: 0; }
+}
+
+/* Paleta: el acento va más angosto */
+.regla__demo--paleta span.is-acento { flex: 0.45; }
+.regla__demo--figuras { align-items: center; justify-content: center; }
+.cartel__titulo--filo { font-size: clamp(3rem, 1rem + 6vw, 7rem); line-height: 0.9; rotate: -3.5deg; }
+.cartel__titulo--filo .cartel__linea:last-child { font-size: 1.45em; margin-top: 0; }
+.cartel__figura--izq.cartel__figura--comida { max-width: 520px; }
