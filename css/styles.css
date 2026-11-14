@@ -130,14 +130,14 @@ a {
 .menu__list {
   display: grid;
   grid-template-columns: 1fr 380px 1fr;
-  align-items: end;
+  align-items: center;
   width: min(100% - 2 * var(--space-md), 1400px);
-  min-height: 96px;
+  min-height: 110px;
   margin-inline: auto;
-  padding: var(--space-md) 0 var(--space-sm);
+  padding: 0 0 var(--space-md);
 }
 
-.menu__lado { display: flex; gap: 2px; align-items: flex-end; padding-bottom: 18px; }
+.menu__lado { display: flex; gap: 6px; align-items: flex-start; align-self: center; }
 .menu__lado--izq { justify-content: flex-end; }
 .menu__lado--der { justify-content: flex-start; }
 
@@ -159,14 +159,14 @@ a {
 .menu__sello:hover { transform: scale(1.04); }
 .menu__sello img { display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 14px rgb(13 9 25 / 0.7)); }
 
-@media (min-width: 1421px) {
-  .menu__list .menu__tab { font-size: 1rem; }
+@media (min-width: 1521px) {
+  .menu__list .menu__tab { font-size: 0.9rem; padding: 0.34rem 0.7rem 0.28rem; }
 }
 
 /* Pantallas medianas y celular: el sello arriba y una fila de
    pestañas que se desliza. Al bajar, el sello se guarda para que la
    carpa no ocupe media pantalla. */
-@media (max-width: 1420px) {
+@media (max-width: 1520px) {
   .menu__list {
     display: flex;
     flex-wrap: nowrap;
@@ -188,58 +188,76 @@ a {
   .menu--compacto .menu__sello { opacity: 0; scale: 0.4; pointer-events: none; }
 }
 
-/* Pestañas: letras de letrero sobre la carpa, sin cajas.
-   Lilita en crema con sombra para leerse sobre los azulejos; al pasar
-   se encienden, y la activa queda en neón mango con su ondita de faldón. */
+/* Pestañas: letreritos colgados de la carpa con su cordel, como el
+   logo. Placa noche con borde crema fino; la activa se enciende entera
+   en mango y se mece un poquito. */
 .menu__tab {
   position: relative;
   display: block;
-  padding: 0.35rem 0.7rem 0.6rem;
+  margin-top: 20px;
+  padding: 0.38rem 0.85rem 0.32rem;
   color: var(--crema);
-  background: none;
-  border: 0;
+  background: rgb(13 9 25 / 0.92);
+  border: 1.5px solid rgb(255 241 220 / 0.45);
+  border-radius: 8px;
+  box-shadow: 0 4px 0 rgb(13 9 25 / 0.8);
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   white-space: nowrap;
   text-decoration: none;
-  text-shadow: 0 2px 0 var(--noche), 0 0 10px rgb(13 9 25 / 0.95), 0 0 18px rgb(13 9 25 / 0.8);
-  transition: color var(--dur-fast) var(--ease-out), text-shadow var(--dur-fast) var(--ease-out);
+  transform-origin: 50% -20px;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), rotate 0.3s var(--ease-pop);
 }
 
+/* El cordel */
+.menu__tab::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 2px;
+  height: 20px;
+  translate: -50% 0;
+  background: linear-gradient(rgb(255 241 220 / 0.15), rgb(255 241 220 / 0.55));
+}
+
+/* El clavito donde amarra el cordel a la placa */
 .menu__tab::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 0;
-  width: 34px;
-  height: 9px;
+  top: -3px;
+  width: 6px;
+  height: 6px;
   translate: -50% 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 9'%3E%3Cpath d='M2 2 Q9.5 9 17 2 Q24.5 9 32 2' fill='none' stroke='%23FFC93C' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
-  filter: drop-shadow(0 0 4px var(--mango));
-  opacity: 0;
-  scale: 0.4 1;
-  transition: opacity var(--dur-fast) var(--ease-out), scale var(--dur-fast) var(--ease-pop);
+  background: var(--crema);
+  border-radius: 50%;
 }
 
 .menu__tab:hover {
+  border-color: var(--mango);
   color: #FFF0B8;
-  text-shadow: 0 2px 0 var(--noche), 0 0 8px rgb(255 201 60 / 0.7), 0 0 18px rgb(13 9 25 / 0.8);
+  rotate: -2deg;
 }
 
 .menu__tab[aria-selected="true"] {
-  color: var(--mango);
-  text-shadow: 0 2px 0 var(--noche), 0 0 6px rgb(255 201 60 / 0.9), 0 0 16px rgb(255 201 60 / 0.55);
+  color: var(--noche);
+  background: var(--mango);
+  border-color: #FFF0B8;
+  box-shadow: 0 4px 0 rgb(13 9 25 / 0.8), 0 0 10px rgb(255 201 60 / 0.65), 0 0 22px rgb(255 201 60 / 0.35);
+  rotate: 2deg;
 }
 
-.menu__tab[aria-selected="true"]::after { opacity: 1; scale: 1; }
+.menu__tab[aria-selected="true"]::before { background: linear-gradient(rgb(255 201 60 / 0.2), var(--mango)); }
+.menu__tab[aria-selected="true"]::after { background: var(--noche); }
 
 .menu__tab:active { transform: translateY(1px); }
 
 @media (max-width: 600px) {
   .menu__list { gap: 6px; }
-  .menu__tab { font-size: 0.86rem; padding: 0.25rem 0.7rem; }
+  .menu__tab { font-size: 0.86rem; padding: 0.3rem 0.65rem 0.26rem; }
 }
 
 
@@ -377,46 +395,63 @@ a {
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-areas:
+    "izq titulo der"
+    "pie pie pie";
   align-items: center;
-  gap: var(--space-xl);
-  min-height: min(88vh, 860px);
-  padding: calc(var(--space-xl) + 54px) max(var(--space-lg), (100% - 1240px) / 2) var(--space-xl);
+  column-gap: var(--space-lg);
+  row-gap: var(--space-lg);
+  padding: calc(var(--space-2xl) + 70px) max(var(--space-md), (100% - 1240px) / 2) var(--space-xl);
+  text-align: center;
 }
 
-/* Un halo de luz detrás de las figuras, como el reflejo del letrero en la pared */
+/* Un halo de luz detrás del titular, como el reflejo del letrero en la pared */
 .cartel::before {
   content: "";
   position: absolute;
-  right: max(0px, (100% - 1240px) / 2);
-  top: 50%;
-  width: min(60vw, 720px);
-  aspect-ratio: 1;
-  translate: 10% -50%;
-  background: radial-gradient(closest-side, rgb(180 85 255 / 0.18), rgb(46 200 255 / 0.06) 55%, transparent);
+  left: 50%;
+  top: 46%;
+  width: min(90vw, 980px);
+  aspect-ratio: 2 / 1;
+  translate: -50% -50%;
+  background: radial-gradient(closest-side, rgb(180 85 255 / 0.14), rgb(46 200 255 / 0.05) 55%, transparent);
   pointer-events: none;
 }
 
 .cartel > * { position: relative; }
 
-.cartel__texto {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-lg);
-}
-
 .cartel__titulo {
+  grid-area: titulo;
   display: flex;
   flex-direction: column;
-  font-size: clamp(2.6rem, 0.8rem + 5.4vw, 6.2rem);
+  align-items: center;
+  font-size: clamp(2.6rem, 0.8rem + 5vw, 5.8rem);
   line-height: 0.98;
 }
 
 .cartel__linea:last-child { font-size: 0.62em; margin-top: 0.12em; }
 
+.cartel__figura {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  pointer-events: none;
+}
+
+.cartel__figura--izq { grid-area: izq; justify-self: end; rotate: -6deg; }
+.cartel__figura--der { grid-area: der; justify-self: start; rotate: 6deg; }
+
+.cartel__pie {
+  grid-area: pie;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
 .cartel__bajada {
-  max-width: 40ch;
+  max-width: 46ch;
   font-size: var(--step-1);
   line-height: 1.5;
   color: var(--text-secondary);
@@ -427,22 +462,18 @@ a {
   color: var(--text-secondary);
 }
 
-.cartel__escena {
-  width: 100%;
-  max-width: 560px;
-  justify-self: center;
-}
-
 @media (max-width: 900px) {
   .cartel {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-    min-height: 0;
-    padding: calc(var(--space-lg) + 54px) var(--space-md) var(--space-xl);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "izq der"
+      "titulo titulo"
+      "pie pie";
+    row-gap: var(--space-md);
+    padding: calc(var(--space-xl) + 40px) var(--space-md) var(--space-xl);
   }
 
-  .cartel__escena { order: -1; max-width: 320px; }
-  .cartel::before { right: 50%; top: 22%; translate: 50% -50%; width: 120vw; }
+  .cartel__figura { max-width: 150px; }
 }
 
 /* Carrusel: las figuras se turnan encendiéndose y apagándose */
@@ -1070,9 +1101,8 @@ a {
   .cartel__linea { animation: encender 1.1s linear both; }
   .cartel__linea:nth-child(2) { animation-delay: 0.25s; }
   .cartel__linea:nth-child(3) { animation-delay: 0.5s; }
-  .cartel__bajada,
-  .cartel__texto > .btn,
-  .cartel__nota { animation: entrar 0.5s var(--ease-out) 0.9s both; }
+  .cartel__pie { animation: entrar 0.5s var(--ease-out) 0.9s both; }
+  .cartel__figura { animation: entrar 0.6s var(--ease-out) 0.3s both; }
   .chapter.is-entering { animation: entrar 0.35s var(--ease-out) both; }
   .value[data-state="open"] .value__body { animation: abrir 0.25s var(--ease-out) both; }
   .bubble.is-new { animation: entrar 0.3s var(--ease-out) both; }
