@@ -144,7 +144,7 @@ a {
 /* El sello: un círculo de neón con los cuatro colores del faldón,
    colgado en el centro de la carpa, y el logo encendido adentro */
 .menu__sello {
-  --d: 360px;
+  --d: 300px;
   position: absolute;
   z-index: 2;
   top: 12px;
@@ -174,7 +174,7 @@ a {
     gap: 12px;
     width: 100%;
     min-height: 0;
-    padding: 158px var(--space-md) var(--space-sm);
+    padding: 172px var(--space-md) var(--space-sm);
     overflow-x: auto;
     scrollbar-width: none;
     transition: padding-top 0.25s var(--ease-out);
@@ -183,7 +183,7 @@ a {
   .menu__lado { display: contents; }
   .menu__hueco { display: none; }
   .menu__tab { flex-shrink: 0; }
-  .menu__sello { --d: 240px; transition: opacity 0.2s, scale 0.25s var(--ease-out); }
+  .menu__sello { --d: 205px; transition: opacity 0.2s, scale 0.25s var(--ease-out); }
   .menu--compacto .menu__list { padding-top: var(--space-sm); }
   .menu--compacto .menu__sello { opacity: 0; scale: 0.4; pointer-events: none; }
 }
@@ -1134,7 +1134,7 @@ a {
 
 /* En celular el menú es una sola fila que se desliza de lado */
 @media (max-width: 760px) {
-  .menu__sello { --d: 200px; top: 8px; }
+  .menu__sello { --d: 165px; top: 8px; }
   .menu__list {
     padding-top: 132px;
     display: flex;
@@ -1149,3 +1149,15 @@ a {
   .menu__list::-webkit-scrollbar { display: none; }
   .menu__tab { flex-shrink: 0; }
 }
+
+/* ==========================================================
+   SISTEMA DE LOGO
+   ========================================================== */
+.logos { list-style:none; padding:0; margin:var(--space-md, 1.5rem) 0; display:grid; gap:1.25rem;
+  grid-template-columns:repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.logo-uso h3 { margin:.75rem 0 .25rem; }
+.logo-uso p { margin:0; color:var(--gris); }
+.logo-uso__demo { aspect-ratio:4/3; display:grid; place-items:center; padding:1.25rem; border-radius:16px;
+  background:var(--panel); border:1px solid var(--linea-suave); }
+.logo-uso__demo--claro { background:#FFFFFF; }
+.logo-uso__demo img { max-width:100%; max-height:100%; object-fit:contain; }

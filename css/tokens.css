@@ -39,12 +39,12 @@
      Noche: el fondo. Uva: TODAS las sombras.
      Mango, tomate y cian: títulos y botones.
      Naranja, morado y lima: las figuras y los detalles de neón. */
-  --uva: #5B1F94;        /* todas las sombras: el morado hondo de la noche */
-  --mango: #FFC93C;       /* lo principal: botones, activo, faldón */
-  --tomate: #FF4A5A;      /* neón rojo */
+  --uva: #5B0DA8;        /* todas las sombras: el morado hondo de la noche */
+  --mango: #FFB700;       /* lo principal: botones, activo, faldón */
+  --tomate: #FF2440;      /* neón rojo */
   --naranja: #FF8A2B;     /* neón ámbar, el del sombrero */
   --morado: #B455FF;      /* neón morado, el de la Marimonda */
-  --cian: #2EC8FF;        /* neón cian */
+  --cian: #00B9FF;        /* neón cian */
   --lima: #7CFF6B;        /* neón verde; confirmar y WhatsApp */
   --neon-mango: 0 0 8px rgb(255 201 60 / 0.9), 0 0 22px rgb(255 201 60 / 0.5);
 
