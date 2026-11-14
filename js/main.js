@@ -157,37 +157,46 @@
   var DEFAULT_SECTION = "alma";
 
   function sectionTabs() {
-    return $all('.menu__tab[data-action="show-section"]');
+    return $all('.menu__tab[data-grupo]');
   }
 
+  // Las cuatro partes (grupos) y sus subsecciones: se ve una de cada a la vez
   function showSection(id, options) {
     var opts = options || {};
-    var panel = id ? document.getElementById(id) : null;
-    if (!panel || panel.getAttribute("role") !== "tabpanel") return;
+    var el = id ? document.getElementById(id) : null;
+    if (!el) return;
+    var grupo = el.classList.contains("grupo") ? el : el.closest(".grupo");
+    if (!grupo) return;
+    var sub = el.classList.contains("subsec") ? el : $(".subsec", grupo);
+    if (!sub) return;
 
-    $all('.chapter[role="tabpanel"]').forEach(function (section) {
-      var active = section === panel;
-      section.hidden = !active;
-      section.classList.remove("is-entering");
+    $all(".grupo").forEach(function (g) {
+      g.hidden = g !== grupo;
+      g.classList.remove("is-entering");
     });
+    $all(".subsec", grupo).forEach(function (s) { s.hidden = s !== sub; });
 
     sectionTabs().forEach(function (tab) {
-      var selected = tab.getAttribute("data-target") === id;
+      var selected = tab.getAttribute("data-grupo") === grupo.id;
       tab.setAttribute("aria-selected", String(selected));
       tab.setAttribute("tabindex", selected ? "0" : "-1");
       if (selected && opts.focusTab) tab.focus();
     });
+    $all(".subnav__btn", grupo).forEach(function (b) {
+      var on = b.getAttribute("data-target") === sub.id;
+      b.setAttribute("aria-selected", String(on));
+      b.setAttribute("tabindex", on ? "0" : "-1");
+    });
+    // Cerrar los submenús desplegables después de elegir
+    if (document.activeElement && document.activeElement.closest && document.activeElement.closest(".menu__sub")) document.activeElement.blur();
 
-    // Reiniciar la animación de entrada
-    void panel.offsetWidth;
-    panel.classList.add("is-entering");
+    void grupo.offsetWidth;
+    grupo.classList.add("is-entering");
 
     if (opts.updateHash !== false && window.history && history.replaceState) {
-      history.replaceState(null, "", "#" + id);
+      history.replaceState(null, "", "#" + sub.id);
     }
 
-    // El menú vive arriba y es pegajoso: bajamos al inicio del contenido,
-    // dejando espacio para la carpa y su faldón.
     if (opts.scroll) {
       var main = $("#contenido");
       var menu = $(".menu");

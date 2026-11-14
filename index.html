@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0D0919">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/tokens.css?v=9.0">
-  <link rel="stylesheet" href="css/styles.css?v=9.0">
+  <link rel="stylesheet" href="css/styles.css?v=9.1">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -17,19 +17,13 @@
   <nav class="menu" aria-label="Secciones de la guía">
     <div class="menu__list" role="tablist" aria-label="Secciones de la guía">
       <div class="menu__lado menu__lado--izq" role="presentation">
-        <a class="menu__tab" href="#alma" role="tab" id="tab-alma" aria-controls="alma" aria-selected="true" tabindex="0" data-action="show-section" data-target="alma">El alma</a>
-        <a class="menu__tab" href="#valores" role="tab" id="tab-valores" aria-controls="valores" aria-selected="false" tabindex="-1" data-action="show-section" data-target="valores">Valores</a>
-        <a class="menu__tab" href="#personalidad" role="tab" id="tab-personalidad" aria-controls="personalidad" aria-selected="false" tabindex="-1" data-action="show-section" data-target="personalidad">Personalidad</a>
-        <a class="menu__tab" href="#voz" role="tab" id="tab-voz" aria-controls="voz" aria-selected="false" tabindex="-1" data-action="show-section" data-target="voz">Voz</a>
-        <a class="menu__tab" href="#publicos" role="tab" id="tab-publicos" aria-controls="publicos" aria-selected="false" tabindex="-1" data-action="show-section" data-target="publicos">Públicos</a>
+        <div class="menu__item"><a class="menu__tab" href="#g-alma" role="tab" id="tab-g-alma" aria-controls="g-alma" aria-selected="false" tabindex="-1" data-action="show-section" data-target="alma" data-grupo="g-alma">El alma</a><ul class="menu__sub" aria-label="El alma"><li><a href="#alma" data-action="show-section" data-target="alma">Esencia</a></li><li><a href="#valores" data-action="show-section" data-target="valores">Valores</a></li><li><a href="#personalidad" data-action="show-section" data-target="personalidad">Personalidad</a></li><li><a href="#voz" data-action="show-section" data-target="voz">Voz</a></li><li><a href="#pendientes" data-action="show-section" data-target="pendientes">Hoja de ruta</a></li></ul></div>
+        <div class="menu__item"><a class="menu__tab" href="#g-mercado" role="tab" id="tab-g-mercado" aria-controls="g-mercado" aria-selected="false" tabindex="-1" data-action="show-section" data-target="publicos" data-grupo="g-mercado">Mercado</a><ul class="menu__sub" aria-label="Mercado"><li><a href="#publicos" data-action="show-section" data-target="publicos">Públicos</a></li><li><a href="#competencia" data-action="show-section" data-target="competencia">Competencia</a></li><li><a href="#redes" data-action="show-section" data-target="redes">Canales</a></li></ul></div>
       </div>
       <span class="menu__hueco" aria-hidden="true"></span>
       <div class="menu__lado menu__lado--der" role="presentation">
-        <a class="menu__tab" href="#menu" role="tab" id="tab-menu" aria-controls="menu" aria-selected="false" tabindex="-1" data-action="show-section" data-target="menu">El menú</a>
-        <a class="menu__tab" href="#identidad" role="tab" id="tab-identidad" aria-controls="identidad" aria-selected="false" tabindex="-1" data-action="show-section" data-target="identidad">Identidad</a>
-        <a class="menu__tab" href="#aplicaciones" role="tab" id="tab-aplicaciones" aria-controls="aplicaciones" aria-selected="false" tabindex="-1" data-action="show-section" data-target="aplicaciones">Aplicaciones</a>
-        <a class="menu__tab" href="#redes" role="tab" id="tab-redes" aria-controls="redes" aria-selected="false" tabindex="-1" data-action="show-section" data-target="redes">Redes</a>
-        <a class="menu__tab" href="#pendientes" role="tab" id="tab-pendientes" aria-controls="pendientes" aria-selected="false" tabindex="-1" data-action="show-section" data-target="pendientes">Lo que falta</a>
+        <div class="menu__item"><a class="menu__tab" href="#g-expresion" role="tab" id="tab-g-expresion" aria-controls="g-expresion" aria-selected="false" tabindex="-1" data-action="show-section" data-target="identidad" data-grupo="g-expresion">Expresión</a><ul class="menu__sub" aria-label="Expresión"><li><a href="#identidad" data-action="show-section" data-target="identidad">Reglas</a></li><li><a href="#logo" data-action="show-section" data-target="logo">Logo</a></li><li><a href="#colores" data-action="show-section" data-target="colores">Colores</a></li><li><a href="#letras" data-action="show-section" data-target="letras">Tipografía</a></li></ul></div>
+        <div class="menu__item"><a class="menu__tab" href="#g-producto" role="tab" id="tab-g-producto" aria-controls="g-producto" aria-selected="false" tabindex="-1" data-action="show-section" data-target="menu" data-grupo="g-producto">Producto</a><ul class="menu__sub" aria-label="Producto"><li><a href="#menu" data-action="show-section" data-target="menu">Platos héroe</a></li><li><a href="#nombres" data-action="show-section" data-target="nombres">Nombres</a></li><li><a href="#salsas" data-action="show-section" data-target="salsas">Salsas</a></li><li><a href="#comida" data-action="show-section" data-target="comida">Cómo se muestra</a></li><li><a href="#aplicaciones" data-action="show-section" data-target="aplicaciones">Así se vende</a></li></ul></div>
       </div>
     </div>
     <!-- El sello: el logo encendido en el centro de la carpa. Nombre provisional. -->
@@ -41,17 +35,15 @@
   <!-- ===================== PORTADA: el cartel ===================== -->
   <header class="cartel">
     <!-- El titular centrado bajo el logo, con una figura de Carnaval a cada lado -->
-    <img class="cartel__figura cartel__figura--izq cartel__figura--comida" src="img/salchipapa.svg?v=9.0" alt="" width="740" height="490">
     <h1 class="letrero cartel__titulo cartel__titulo--filo">
       <span class="cartel__linea" style="--n: var(--mango);">¿Tienes</span>
       <span class="cartel__linea" style="--n: var(--cian);">filo?</span>
     </h1>
-    <img class="cartel__figura cartel__figura--der cartel__figura--comida" src="img/pizza.svg?v=9.0" alt="" width="500" height="540">
 
     <div class="cartel__pie">
-      <p class="cartel__bajada">Salchicosteñas cargadas, pizza de barrio y salsa por encima: la comida rápida de la calle costeña, en San José, California. Esta es la guía interna de la marca.</p>
-      <a class="btn" href="#menu" data-action="show-section" data-target="menu">Ver el menú</a>
-      <p class="cartel__nota">Borrador 9.0: la calle de la Costa.</p>
+      <p class="cartel__bajada">La comida rápida de la calle costeña, en San José, California. Esta es la guía interna de la marca: el alma, el mercado, la expresión y el producto.</p>
+      <a class="btn" href="#alma" data-action="show-section" data-target="alma">Empezar por el alma</a>
+      <p class="cartel__nota">Borrador 9.1: la guía en cuatro partes.</p>
     </div>
   </header>
 
@@ -60,9 +52,15 @@
   <main id="contenido" tabindex="-1">
 
     <!-- ===================== EL ALMA ===================== -->
-    <section class="chapter" id="alma" role="tabpanel" aria-labelledby="tab-alma" tabindex="-1" style="--n: var(--mango);">
+    <section class="chapter grupo" id="g-alma" role="tabpanel" aria-labelledby="tab-g-alma" tabindex="-1" style="--n: var(--mango);" hidden>
+      <div class="grupo__head">
+        <p class="grupo__eyebrow">El alma</p>
+        <p class="grupo__intro">Quiénes somos por dentro: lo que creemos, cómo somos y cómo hablamos.</p>
+        <div class="subnav" role="tablist" aria-label="El alma"><button type="button" class="subnav__btn" role="tab" id="st-alma" aria-controls="alma" aria-selected="false" tabindex="-1" data-action="show-section" data-target="alma">Esencia</button><button type="button" class="subnav__btn" role="tab" id="st-valores" aria-controls="valores" aria-selected="false" tabindex="-1" data-action="show-section" data-target="valores">Valores</button><button type="button" class="subnav__btn" role="tab" id="st-personalidad" aria-controls="personalidad" aria-selected="false" tabindex="-1" data-action="show-section" data-target="personalidad">Personalidad</button><button type="button" class="subnav__btn" role="tab" id="st-voz" aria-controls="voz" aria-selected="false" tabindex="-1" data-action="show-section" data-target="voz">Voz</button><button type="button" class="subnav__btn" role="tab" id="st-pendientes" aria-controls="pendientes" aria-selected="false" tabindex="-1" data-action="show-section" data-target="pendientes">Hoja de ruta</button></div>
+      </div>
+      <div class="subsec" id="alma" role="tabpanel" aria-labelledby="st-alma" tabindex="-1" hidden>
       <header class="chapter__head">
-        <h2 class="letrero chapter__title">El alma</h2>
+        <h2 class="letrero chapter__title">Esencia</h2>
         <p class="chapter__intro">Todo lo que hacemos pasa por una pregunta: <strong>¿esto sabe a la esquina de la Costa?</strong></p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
@@ -87,10 +85,8 @@
           <p>No somos fast food barato. Somos comida de calle costeña, y en la Costa eso es cultura y orgullo. Lo rápido es solo la forma de servirla.</p>
         </article>
       </div>
-    </section>
-
-    <!-- ===================== VALORES: el line-up ===================== -->
-    <section class="chapter" id="valores" role="tabpanel" aria-labelledby="tab-valores" tabindex="-1" style="--n: var(--tomate);">
+      </div>
+      <div class="subsec" id="valores" role="tabpanel" aria-labelledby="st-valores" tabindex="-1" hidden>
       <header class="chapter__head">
         <h2 class="letrero chapter__title">Los valores</h2>
         <p class="chapter__intro">Cada uno con su nombre en grande, como el cartel de la fiesta. Toca uno para ver cómo se nota y qué no es.</p>
@@ -164,10 +160,8 @@
           </div>
         </li>
       </ul>
-    </section>
-
-    <!-- ===================== PERSONALIDAD ===================== -->
-    <section class="chapter" id="personalidad" role="tabpanel" aria-labelledby="tab-personalidad" tabindex="-1" style="--n: var(--lima);">
+      </div>
+      <div class="subsec" id="personalidad" role="tabpanel" aria-labelledby="st-personalidad" tabindex="-1" hidden>
       <header class="chapter__head">
         <h2 class="letrero chapter__title">El anfitrión costeño</h2>
         <p class="chapter__intro">La tía o el tío costeño que te recibe en la terraza: te sienta, te sirve de más, te echa un chiste y no te deja ir con hambre.</p>
@@ -196,10 +190,8 @@
           </ul>
         </article>
       </div>
-    </section>
-
-    <!-- ===================== VOZ ===================== -->
-    <section class="chapter" id="voz" role="tabpanel" aria-labelledby="tab-voz" tabindex="-1" style="--n: var(--mango);">
+      </div>
+      <div class="subsec" id="voz" role="tabpanel" aria-labelledby="st-voz" tabindex="-1" hidden>
       <header class="chapter__head">
         <h2 class="letrero chapter__title">Cómo hablamos</h2>
         <p class="chapter__intro">Frases cortas, cálidas y con humor. Al que no es de allá se le explica con cariño, sin dejar de sonar costeño.</p>
@@ -255,10 +247,33 @@
           <p>Inglés claro y la palabra costeña como gancho, explicada una vez: <em>"Hungry? We got filo. Filo (n.): Colombian for starving."</em></p>
         </article>
       </div>
+      </div>
+      <div class="subsec" id="pendientes" role="tabpanel" aria-labelledby="st-pendientes" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">Hoja de ruta</h2>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
+      <ul class="todo">
+        <li data-state="done">Alma, valores, personalidad y voz</li>
+        <li data-state="done">Públicos, redes y voz en dos idiomas</li>
+        <li data-state="done">Nombre: Pa'l Filo, con sistema de logo</li>
+        <li data-state="review">Identidad 9.0 "La calle de la Costa": validar</li>
+        <li data-state="review">Nombres nuevos de los platos: validar</li>
+        <li>Fotos reales de la salchicosteña y la pizza con la guía de fondo, luz y ángulo</li>
+        <li>Historia de origen: quién cocina y por qué lo buscaban en la Costa</li>
+        <li>Revisar marca registrada en San José y asegurar @palfilo y palfilo.com</li>
+        <li>Aplicar la marca a la web del consumidor, los empaques y DoorDash</li>
+      </ul>
+      </div>
     </section>
-
-    <!-- ===================== PÚBLICOS ===================== -->
-    <section class="chapter" id="publicos" role="tabpanel" aria-labelledby="tab-publicos" tabindex="-1" style="--n: var(--tomate);">
+    <!-- ===================== MERCADO ===================== -->
+    <section class="chapter grupo" id="g-mercado" role="tabpanel" aria-labelledby="tab-g-mercado" tabindex="-1" style="--n: var(--tomate);" hidden>
+      <div class="grupo__head">
+        <p class="grupo__eyebrow">Mercado</p>
+        <p class="grupo__intro">A quién le vendemos, contra quién competimos y por dónde llegamos.</p>
+        <div class="subnav" role="tablist" aria-label="Mercado"><button type="button" class="subnav__btn" role="tab" id="st-publicos" aria-controls="publicos" aria-selected="false" tabindex="-1" data-action="show-section" data-target="publicos">Públicos</button><button type="button" class="subnav__btn" role="tab" id="st-competencia" aria-controls="competencia" aria-selected="false" tabindex="-1" data-action="show-section" data-target="competencia">Competencia</button><button type="button" class="subnav__btn" role="tab" id="st-redes" aria-controls="redes" aria-selected="false" tabindex="-1" data-action="show-section" data-target="redes">Canales</button></div>
+      </div>
+      <div class="subsec" id="publicos" role="tabpanel" aria-labelledby="st-publicos" tabindex="-1" hidden>
       <header class="chapter__head">
         <h2 class="letrero chapter__title">Para quién cocinamos</h2>
         <p class="chapter__intro">No se adapta la comida, se adapta la explicación.</p>
@@ -282,12 +297,194 @@
           <p><strong>Busca</strong> volver a su tierra por un rato. <strong>Teme</strong> que sea costeño de mentiras. <strong>Le damos</strong> el sabor de allá, sin adaptar nada. Si él lo aprueba, el resto confía.</p>
         </article>
       </div>
-    </section>
-
-    <!-- ===================== EL MENÚ ===================== -->
-    <section class="chapter" id="menu" role="tabpanel" aria-labelledby="tab-menu" tabindex="-1" style="--n: var(--mango);">
+      </div>
+      <div class="subsec" id="competencia" role="tabpanel" aria-labelledby="st-competencia" tabindex="-1" hidden>
       <header class="chapter__head">
-        <h2 class="letrero chapter__title">El menú</h2>
+        <h2 class="letrero chapter__title">Competencia</h2>
+        <p class="chapter__intro">Lo que hay hoy en San José y dónde quedamos nosotros.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
+      <div class="columnas columnas--3">
+        <article class="nota">
+          <p class="nota__rol">Colombianos tradicionales</p>
+          <h3>Fonda Colombiana, El Bumangues</h3>
+          <p>Restaurantes de mantel: bandeja paisa, arepas, empanadas y patacones. Venden "como en casa" y lo típico del interior. Es otra ocasión de consumo: sentarse a almorzar.</p>
+        </article>
+        <article class="nota">
+          <p class="nota__rol">Antojos colombianos</p>
+          <h3>Milohas, Empanada House, El Gran Tamal</h3>
+          <p>Panadería, empanadas y tamales, algunos en food truck. Compiten por el antojo, pero con producto de horno o tradicional, no con comida rápida cargada.</p>
+        </article>
+        <article class="nota">
+          <p class="nota__rol">Los más cercanos</p>
+          <h3>La Callejera, La Terraza Grill</h3>
+          <p>La Callejera usa la palabra "calle" y La Terraza aparece como colombiana y fast food en DoorDash. Son los que más se parecen en idea: hay que vigilarlos y diferenciarnos con la salchicosteña y la voz costeña.</p>
+        </article>
+      </div>
+      <div class="columnas columnas--2">
+        <article class="nota">
+          <h3>La competencia de verdad</h3>
+          <p>Para el gringo y el latino de noche, el rival no es otro colombiano: son las pizzerías de cadena y los food trucks de tacos. Contra ellos ganamos con algo que no tienen: la salchicosteña y la pizza cargada a lo costeño.</p>
+        </article>
+        <article class="nota">
+          <h3>Nuestro hueco</h3>
+          <p>Nadie en San José vende la comida rápida de la calle costeña con una marca propia. Los colombianos de aquí son paisas, bogotanos o de horno; nosotros somos la esquina de la Costa, de noche y con salsa.</p>
+        </article>
+      </div>
+      <p class="hint">Fuentes: listados públicos de Yelp, MapQuest, DoorDash y prensa local (noviembre de 2026). Conviene visitarlos y probar antes de tomar decisiones de precio.</p>
+      </div>
+      <div class="subsec" id="redes" role="tabpanel" aria-labelledby="st-redes" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">Canales</h2>
+        <p class="chapter__intro">TikTok descubre, Instagram enamora, Facebook reúne y WhatsApp vende. Hoy casi todo entra por WhatsApp; DoorDash vuelve cuando se resuelva la cuenta.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
+
+      <div class="columnas columnas--4">
+        <article class="nota" style="--n: var(--mango);">
+          <p class="nota__rol">Volumen</p>
+          <h3>TikTok</h3>
+          <p>La salchicosteña armándose y la salsa cayendo, con humor costeño. De cuatro a siete videos por semana.</p>
+        </article>
+        <article class="nota" style="--n: var(--tomate);">
+          <p class="nota__rol">Vitrina</p>
+          <h3>Instagram</h3>
+          <p>Reels, perfil cuidado e historias diarias. Destacadas: menú, cómo pedir, reseñas.</p>
+        </article>
+        <article class="nota" style="--n: var(--lima);">
+          <p class="nota__rol">Comunidad</p>
+          <h3>Facebook</h3>
+          <p>Combos para compartir y grupos de colombianos y latinos de la Bahía.</p>
+        </article>
+        <article class="nota" style="--n: var(--mango);">
+          <p class="nota__rol">Venta</p>
+          <h3>WhatsApp</h3>
+          <p>El canal que hoy vende, atendido a mano. Siguiente paso: catálogo, respuestas rápidas en los dos idiomas y el especial de la semana.</p>
+        </article>
+      </div>
+      </div>
+    </section>
+    <!-- ===================== EXPRESIÓN ===================== -->
+    <section class="chapter grupo" id="g-expresion" role="tabpanel" aria-labelledby="tab-g-expresion" tabindex="-1" style="--n: var(--cian);" hidden>
+      <div class="grupo__head">
+        <p class="grupo__eyebrow">Expresión</p>
+        <p class="grupo__intro">Cómo se ve y se siente la marca: reglas, logo, color y letra.</p>
+        <div class="subnav" role="tablist" aria-label="Expresión"><button type="button" class="subnav__btn" role="tab" id="st-identidad" aria-controls="identidad" aria-selected="false" tabindex="-1" data-action="show-section" data-target="identidad">Reglas</button><button type="button" class="subnav__btn" role="tab" id="st-logo" aria-controls="logo" aria-selected="false" tabindex="-1" data-action="show-section" data-target="logo">Logo</button><button type="button" class="subnav__btn" role="tab" id="st-colores" aria-controls="colores" aria-selected="false" tabindex="-1" data-action="show-section" data-target="colores">Colores</button><button type="button" class="subnav__btn" role="tab" id="st-letras" aria-controls="letras" aria-selected="false" tabindex="-1" data-action="show-section" data-target="letras">Tipografía</button></div>
+      </div>
+      <div class="subsec" id="identidad" role="tabpanel" aria-labelledby="st-identidad" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">La calle de la Costa</h2>
+        <p class="chapter__intro">La marca es el carrito de la esquina de noche: letrero pintado, picó sonando, bombillos y la salsa cayendo. Lo que brilla es el nombre; lo demás se queda quieto. Son cinco reglas.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
+
+      <ul class="reglas">
+        <li class="regla">
+          <div class="regla__demo regla__demo--noche" aria-hidden="true"></div>
+          <div>
+            <h3>La noche</h3>
+            <p>Vendemos de noche, y la marca vive sobre noche morada. Para la comida en apps y empaques también se puede usar fondo mango o crema.</p>
+          </div>
+        </li>
+        <li class="regla">
+          <div class="regla__demo regla__demo--paleta" aria-hidden="true"><span style="--n: var(--crema);"></span><span style="--n: var(--mango);"></span><span style="--n: var(--tomate);"></span><span style="--n: var(--cian);" class="is-acento"></span></div>
+          <div>
+            <h3>Tres colores y un acento</h3>
+            <p>Sobre noche: crema, mango y tomate hacen todo el trabajo. Cian es el acento, uno por pieza. Uva solo para sombras y lima solo para confirmar y WhatsApp.</p>
+          </div>
+        </li>
+        <li class="regla">
+          <div class="regla__demo" aria-hidden="true"><span class="letrero regla__letra" style="--n: var(--mango);">Ajá</span></div>
+          <div>
+            <h3>Letra de picó</h3>
+            <p>Como los letreros pintados de los picós y los carritos: Lilita One en mayúsculas, relleno de color, contorno crema y sombra uva en bloque. Solo para títulos.</p>
+          </div>
+        </li>
+        <li class="regla">
+          <div class="regla__demo regla__demo--carpa" aria-hidden="true"></div>
+          <div>
+            <h3>El chorro de salsa</h3>
+            <p>El faldón de ondas de la carpa es la salsa cayendo en zigzag. Va arriba y abajo como marco, en los empaques como troquel y sobre la comida como gesto. Es la seña que se reconoce sin ver el logo.</p>
+          </div>
+        </li>
+        <li class="regla">
+          <div class="regla__demo regla__demo--uno" aria-hidden="true"><span></span><span class="is-on"></span><span></span></div>
+          <div>
+            <h3>Un solo protagonista</h3>
+            <p>En cada pantalla brilla una sola cosa: el título o la figura. Las tarjetas, los botones secundarios y los textos se quedan apagados.</p>
+          </div>
+        </li>
+      </ul>
+
+
+      </div>
+      <div class="subsec" id="logo" role="tabpanel" aria-labelledby="st-logo" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">El logo</h2>
+        <p class="chapter__intro">Pa'l Filo es un sticker de letrero: Lilita inclinada, contorno crema, relieve uva y la placa roja. El neón vive en el ambiente, no en el logo. El apóstrofe rojo es la firma.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
+      <ul class="logos">
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/principal.png?v=9.0" alt="Logo principal"></div><h3>Principal</h3><p>Letrero, portada y redes. Relieve profundo, sobre noche.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/horizontal.png?v=9.0" alt="Logo horizontal"></div><h3>Horizontal</h3><p>Espacios bajos: header web, recibos, cajón de domicilio.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/simple.png?v=9.0" alt="Logo simple"></div><h3>Simple</h3><p>Tamaños pequeños. Una sola sombra.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo logo-uso__demo--claro"><img src="img/logo/fondo-claro.png?v=9.0" alt="Logo para fondo claro"></div><h3>Fondo claro</h3><p>Cajas, vasos y papel blanco. Contorno noche en vez de crema.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/una-tinta.png?v=9.0" alt="Logo a una tinta"></div><h3>Una tinta</h3><p>Sellos, kraft, vinilo, bordado. Un solo color, sin efectos.</p></li>
+        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/icono.png?v=9.0" alt="Ícono P'F"></div><h3>Ícono</h3><p>DoorDash, Instagram, app y favicon. P cian, apóstrofe tomate, F mango, como en el nombre.</p></li>
+      </ul>
+      <p class="hint">Tamaño mínimo: 120 px de ancho para el principal; debajo de eso, el simple o el ícono. Espacio libre alrededor: la altura de la placa.</p>
+
+
+      </div>
+      <div class="subsec" id="colores" role="tabpanel" aria-labelledby="st-colores" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">Colores</h2>
+        <p class="chapter__intro">Tres colores hacen todo el trabajo sobre noche: crema, mango y tomate. Cian es el acento; uva y lima tienen un solo uso.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
+      <ul class="swatches">
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#0D0919" data-name="Noche"><span class="swatch__chip" style="background:#0D0919;"></span><span class="swatch__name">Noche</span><span class="swatch__role">Fondo, noche morada</span><span class="swatch__hex">#0D0919</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#5B0DA8" data-name="Uva"><span class="swatch__chip" style="background:#5B0DA8;"></span><span class="swatch__name">Uva</span><span class="swatch__role">Solo sombras y relieve</span><span class="swatch__hex">#5B0DA8</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FFF1DC" data-name="Crema"><span class="swatch__chip" style="background:#FFF1DC;"></span><span class="swatch__name">Crema</span><span class="swatch__role">Texto y contorno</span><span class="swatch__hex">#FFF1DC</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FFB700" data-name="Mango"><span class="swatch__chip" style="background:#FFB700;"></span><span class="swatch__name">Mango</span><span class="swatch__role">Principal: FILO, botones</span><span class="swatch__hex">#FFB700</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FF2440" data-name="Tomate"><span class="swatch__chip" style="background:#FF2440;"></span><span class="swatch__name">Tomate</span><span class="swatch__role">Principal: placa, apóstrofe, promos</span><span class="swatch__hex">#FF2440</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#00B9FF" data-name="Cian"><span class="swatch__chip" style="background:#00B9FF;"></span><span class="swatch__name">Cian</span><span class="swatch__role">Acento: PA'L, un toque por pieza</span><span class="swatch__hex">#00B9FF</span></button></li>
+        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#7CFF6B" data-name="Lima"><span class="swatch__chip" style="background:#7CFF6B;"></span><span class="swatch__name">Lima</span><span class="swatch__role">Solo confirmar y WhatsApp</span><span class="swatch__hex">#7CFF6B</span></button></li>
+      </ul>
+      <p class="hint">Toca un color para copiar su código.</p>
+
+
+      </div>
+      <div class="subsec" id="letras" role="tabpanel" aria-labelledby="st-letras" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">Tipografía</h2>
+        <p class="chapter__intro">Dos letras y nada más: una para gritar como letrero, otra para conversar.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
+      <div class="columnas columnas--2">
+        <article class="nota specimen">
+          <p class="letrero specimen__big" style="--n: var(--mango);" aria-hidden="true">Aa</p>
+          <h3>Lilita One</h3>
+          <p>Para títulos, siempre como letrero de picó y en mayúsculas.</p>
+        </article>
+        <article class="nota specimen">
+          <p class="specimen__big specimen__big--body" aria-hidden="true">Aa</p>
+          <h3>Nunito</h3>
+          <p>Para leer y para los subtítulos. En los subtítulos va en negrita con un neón suave; el texto corrido, en crema sobre noche.</p>
+        </article>
+      </div>
+      </div>
+    </section>
+    <!-- ===================== PRODUCTO ===================== -->
+    <section class="chapter grupo" id="g-producto" role="tabpanel" aria-labelledby="tab-g-producto" tabindex="-1" style="--n: var(--lima);" hidden>
+      <div class="grupo__head">
+        <p class="grupo__eyebrow">Producto</p>
+        <p class="grupo__intro">Lo que vendemos y cómo se relaciona cada plato con la marca.</p>
+        <div class="subnav" role="tablist" aria-label="Producto"><button type="button" class="subnav__btn" role="tab" id="st-menu" aria-controls="menu" aria-selected="false" tabindex="-1" data-action="show-section" data-target="menu">Platos héroe</button><button type="button" class="subnav__btn" role="tab" id="st-nombres" aria-controls="nombres" aria-selected="false" tabindex="-1" data-action="show-section" data-target="nombres">Nombres</button><button type="button" class="subnav__btn" role="tab" id="st-salsas" aria-controls="salsas" aria-selected="false" tabindex="-1" data-action="show-section" data-target="salsas">Salsas</button><button type="button" class="subnav__btn" role="tab" id="st-comida" aria-controls="comida" aria-selected="false" tabindex="-1" data-action="show-section" data-target="comida">Cómo se muestra</button><button type="button" class="subnav__btn" role="tab" id="st-aplicaciones" aria-controls="aplicaciones" aria-selected="false" tabindex="-1" data-action="show-section" data-target="aplicaciones">Así se vende</button></div>
+      </div>
+      <div class="subsec" id="menu" role="tabpanel" aria-labelledby="st-menu" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">Platos héroe</h2>
         <p class="chapter__intro">La marca se construye sobre lo que la gente pide. La pizza nos llena la caja; la salchicosteña nos hace únicos.</p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
@@ -309,8 +506,14 @@
         </article>
       </div>
 
-      <h3 class="letrero sub" style="--n: var(--cian);">Nombres nuevos</h3>
-      <p class="chapter__intro">Propuesta. Los nombres salen de la calle y de la jerga costeña, y cada plato lleva una línea en inglés para el que no la conoce.</p>
+
+      </div>
+      <div class="subsec" id="nombres" role="tabpanel" aria-labelledby="st-nombres" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">Nombres</h2>
+        <p class="chapter__intro">Propuesta. Los nombres salen de la calle y de la jerga costeña, y cada plato lleva una línea en inglés para el que no la conoce.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
       <div class="tabla-wrap">
       <table class="nombres">
         <thead><tr><th scope="col">Antes</th><th scope="col">Ahora</th><th scope="col">Para el gringo</th></tr></thead>
@@ -338,43 +541,26 @@
       </table>
       </div>
 
-      <h3 class="letrero sub" style="--n: var(--tomate);">Las salsas son la firma</h3>
+
+      </div>
+      <div class="subsec" id="salsas" role="tabpanel" aria-labelledby="st-salsas" tabindex="-1" hidden>
+      <header class="chapter__head">
+        <h2 class="letrero chapter__title">Las salsas</h2>
+        <p class="chapter__intro">Son la firma de la marca en el plato.</p>
+        <span class="cenefa" aria-hidden="true"></span>
+      </header>
       <div class="salsas">
         <img src="img/salsa-rosada.svg?v=9.0" alt="Salsa rosada"><img src="img/salsa-verde.svg?v=9.0" alt="Salsa verde"><img src="img/salsa-casa.svg?v=9.0" alt="Salsa Pa'l Filo">
         <p>Siete salsas y un gesto: el chorro en zigzag por encima. Es el mismo dibujo del faldón de la carpa, y por eso es la seña de la marca. Rosada, verde, BBQ, tomate, chile, tocino y la Pa'l Filo de la casa.</p>
       </div>
-    </section>
-
-    <!-- ===================== IDENTIDAD ===================== -->
-    <section class="chapter" id="identidad" role="tabpanel" aria-labelledby="tab-identidad" tabindex="-1" style="--n: var(--lima);">
+      </div>
+      <div class="subsec" id="comida" role="tabpanel" aria-labelledby="st-comida" tabindex="-1" hidden>
       <header class="chapter__head">
-        <h2 class="letrero chapter__title">La calle de la Costa</h2>
-        <p class="chapter__intro">La marca es el carrito de la esquina de noche: letrero pintado, picó sonando, bombillos y la salsa cayendo. Lo que brilla es la comida y el nombre; lo demás se queda quieto. Son seis reglas.</p>
+        <h2 class="letrero chapter__title">Cómo se muestra</h2>
+        <p class="chapter__intro">La comida es la única protagonista de esta parte de la marca. Así se dibuja y así se fotografía.</p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
-
       <ul class="reglas">
-        <li class="regla">
-          <div class="regla__demo regla__demo--noche" aria-hidden="true"></div>
-          <div>
-            <h3>La noche</h3>
-            <p>Vendemos de noche, y la marca vive sobre noche morada. Para la comida en apps y empaques también se puede usar fondo mango o crema.</p>
-          </div>
-        </li>
-        <li class="regla">
-          <div class="regla__demo regla__demo--paleta" aria-hidden="true"><span style="--n: var(--crema);"></span><span style="--n: var(--mango);"></span><span style="--n: var(--tomate);"></span><span style="--n: var(--cian);" class="is-acento"></span></div>
-          <div>
-            <h3>Tres colores y un acento</h3>
-            <p>Sobre noche: crema, mango y tomate hacen todo el trabajo. Cian es el acento, uno por pieza. Uva solo para sombras y lima solo para confirmar y WhatsApp.</p>
-          </div>
-        </li>
-        <li class="regla">
-          <div class="regla__demo" aria-hidden="true"><span class="letrero regla__letra" style="--n: var(--mango);">Ajá</span></div>
-          <div>
-            <h3>Letra de picó</h3>
-            <p>Como los letreros pintados de los picós y los carritos: Lilita One en mayúsculas, relleno de color, contorno crema y sombra uva en bloque. Solo para títulos.</p>
-          </div>
-        </li>
         <li class="regla">
           <div class="regla__demo regla__demo--figuras" aria-hidden="true"><img src="img/salchipapa.svg?v=9.0" alt="" style="width:50%"><img src="img/pizza.svg?v=9.0" alt="" style="width:36%"></div>
           <div>
@@ -383,65 +569,18 @@
           </div>
         </li>
         <li class="regla">
-          <div class="regla__demo regla__demo--carpa" aria-hidden="true"></div>
+          <div class="regla__demo" aria-hidden="true"><span class="letrero regla__letra" style="--n: var(--mango);">Foto</span></div>
           <div>
-            <h3>El chorro de salsa</h3>
-            <p>El faldón de ondas de la carpa es la salsa cayendo en zigzag. Va arriba y abajo como marco, en los empaques como troquel y sobre la comida como gesto. Es la seña que se reconoce sin ver el logo.</p>
-          </div>
-        </li>
-        <li class="regla">
-          <div class="regla__demo regla__demo--uno" aria-hidden="true"><span></span><span class="is-on"></span><span></span></div>
-          <div>
-            <h3>Un solo protagonista</h3>
-            <p>En cada pantalla brilla una sola cosa: el título o la figura. Las tarjetas, los botones secundarios y los textos se quedan apagados.</p>
+            <h3>Fotos que llenan el cuadro</h3>
+            <p>El plato ocupa casi todo el encuadre, visto desde arriba o a tres cuartos, sobre fondo noche o mango. Siempre con la salsa cayendo o recién puesta. Nada de platos vacíos ni fondos de cocina.</p>
           </div>
         </li>
       </ul>
-
-      <h3 class="letrero sub" style="--n: var(--cian);">El logo</h3>
-      <p class="chapter__intro">Pa'l Filo es un sticker de letrero: Lilita inclinada, contorno crema, relieve uva y la placa roja. El neón vive en el ambiente, no en el logo. El apóstrofe rojo es la firma.</p>
-      <ul class="logos">
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/principal.png?v=9.0" alt="Logo principal"></div><h3>Principal</h3><p>Letrero, portada y redes. Relieve profundo, sobre noche.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/horizontal.png?v=9.0" alt="Logo horizontal"></div><h3>Horizontal</h3><p>Espacios bajos: header web, recibos, cajón de domicilio.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/simple.png?v=9.0" alt="Logo simple"></div><h3>Simple</h3><p>Tamaños pequeños. Una sola sombra.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo logo-uso__demo--claro"><img src="img/logo/fondo-claro.png?v=9.0" alt="Logo para fondo claro"></div><h3>Fondo claro</h3><p>Cajas, vasos y papel blanco. Contorno noche en vez de crema.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/una-tinta.png?v=9.0" alt="Logo a una tinta"></div><h3>Una tinta</h3><p>Sellos, kraft, vinilo, bordado. Un solo color, sin efectos.</p></li>
-        <li class="logo-uso"><div class="logo-uso__demo"><img src="img/logo/icono.png?v=9.0" alt="Ícono P'F"></div><h3>Ícono</h3><p>DoorDash, Instagram, app y favicon. P cian, apóstrofe tomate, F mango, como en el nombre.</p></li>
-      </ul>
-      <p class="hint">Tamaño mínimo: 120 px de ancho para el principal; debajo de eso, el simple o el ícono. Espacio libre alrededor: la altura de la placa.</p>
-
-      <h3 class="letrero sub" style="--n: var(--mango);">Colores</h3>
-      <ul class="swatches">
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#0D0919" data-name="Noche"><span class="swatch__chip" style="background:#0D0919;"></span><span class="swatch__name">Noche</span><span class="swatch__role">Fondo, noche morada</span><span class="swatch__hex">#0D0919</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#5B0DA8" data-name="Uva"><span class="swatch__chip" style="background:#5B0DA8;"></span><span class="swatch__name">Uva</span><span class="swatch__role">Solo sombras y relieve</span><span class="swatch__hex">#5B0DA8</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FFF1DC" data-name="Crema"><span class="swatch__chip" style="background:#FFF1DC;"></span><span class="swatch__name">Crema</span><span class="swatch__role">Texto y contorno</span><span class="swatch__hex">#FFF1DC</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FFB700" data-name="Mango"><span class="swatch__chip" style="background:#FFB700;"></span><span class="swatch__name">Mango</span><span class="swatch__role">Principal: FILO, botones</span><span class="swatch__hex">#FFB700</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#FF2440" data-name="Tomate"><span class="swatch__chip" style="background:#FF2440;"></span><span class="swatch__name">Tomate</span><span class="swatch__role">Principal: placa, apóstrofe, promos</span><span class="swatch__hex">#FF2440</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#00B9FF" data-name="Cian"><span class="swatch__chip" style="background:#00B9FF;"></span><span class="swatch__name">Cian</span><span class="swatch__role">Acento: PA'L, un toque por pieza</span><span class="swatch__hex">#00B9FF</span></button></li>
-        <li><button class="swatch" type="button" data-action="copy-color" data-hex="#7CFF6B" data-name="Lima"><span class="swatch__chip" style="background:#7CFF6B;"></span><span class="swatch__name">Lima</span><span class="swatch__role">Solo confirmar y WhatsApp</span><span class="swatch__hex">#7CFF6B</span></button></li>
-      </ul>
-      <p class="hint">Toca un color para copiar su código.</p>
-
-      <h3 class="letrero sub" style="--n: var(--tomate);">Letras</h3>
-      <div class="columnas columnas--2">
-        <article class="nota specimen">
-          <p class="letrero specimen__big" style="--n: var(--mango);" aria-hidden="true">Aa</p>
-          <h3>Lilita One</h3>
-          <p>Para títulos, siempre como letrero de picó y en mayúsculas.</p>
-        </article>
-        <article class="nota specimen">
-          <p class="specimen__big specimen__big--body" aria-hidden="true">Aa</p>
-          <h3>Nunito</h3>
-          <p>Para leer y para los subtítulos. En los subtítulos va en negrita con un neón suave; el texto corrido, en crema sobre noche.</p>
-        </article>
       </div>
-    </section>
-
-    <!-- ===================== APLICACIONES ===================== -->
-    <section class="chapter" id="aplicaciones" role="tabpanel" aria-labelledby="tab-aplicaciones" tabindex="-1" style="--n: var(--mango);">
+      <div class="subsec" id="aplicaciones" role="tabpanel" aria-labelledby="st-aplicaciones" tabindex="-1" hidden>
       <header class="chapter__head">
-        <h2 class="letrero chapter__title">Así se ve</h2>
-        <p class="chapter__intro">Tres piezas hechas con las seis reglas. Si en tres segundos se entiende qué vendemos, funciona.</p>
+        <h2 class="letrero chapter__title">Así se vende</h2>
+        <p class="chapter__intro">Tres piezas hechas con las reglas de la marca. Si en tres segundos se entiende qué vendemos, funciona.</p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
 
@@ -477,57 +616,7 @@
           <figcaption>Sticker para cerrar la bolsa</figcaption>
         </figure>
       </div>
-    </section>
-
-    <!-- ===================== REDES ===================== -->
-    <section class="chapter" id="redes" role="tabpanel" aria-labelledby="tab-redes" tabindex="-1" style="--n: var(--tomate);">
-      <header class="chapter__head">
-        <h2 class="letrero chapter__title">Dónde hablamos</h2>
-        <p class="chapter__intro">TikTok descubre, Instagram enamora, Facebook reúne y WhatsApp vende. Hoy casi todo entra por WhatsApp; DoorDash vuelve cuando se resuelva la cuenta.</p>
-        <span class="cenefa" aria-hidden="true"></span>
-      </header>
-
-      <div class="columnas columnas--4">
-        <article class="nota" style="--n: var(--mango);">
-          <p class="nota__rol">Volumen</p>
-          <h3>TikTok</h3>
-          <p>La salchicosteña armándose y la salsa cayendo, con humor costeño. De cuatro a siete videos por semana.</p>
-        </article>
-        <article class="nota" style="--n: var(--tomate);">
-          <p class="nota__rol">Vitrina</p>
-          <h3>Instagram</h3>
-          <p>Reels, perfil cuidado e historias diarias. Destacadas: menú, cómo pedir, reseñas.</p>
-        </article>
-        <article class="nota" style="--n: var(--lima);">
-          <p class="nota__rol">Comunidad</p>
-          <h3>Facebook</h3>
-          <p>Combos para compartir y grupos de colombianos y latinos de la Bahía.</p>
-        </article>
-        <article class="nota" style="--n: var(--mango);">
-          <p class="nota__rol">Venta</p>
-          <h3>WhatsApp</h3>
-          <p>El canal que hoy vende, atendido a mano. Siguiente paso: catálogo, respuestas rápidas en los dos idiomas y el especial de la semana.</p>
-        </article>
       </div>
-    </section>
-
-    <!-- ===================== PENDIENTES ===================== -->
-    <section class="chapter" id="pendientes" role="tabpanel" aria-labelledby="tab-pendientes" tabindex="-1" style="--n: var(--lima);">
-      <header class="chapter__head">
-        <h2 class="letrero chapter__title">Lo que falta</h2>
-        <span class="cenefa" aria-hidden="true"></span>
-      </header>
-      <ul class="todo">
-        <li data-state="done">Alma, valores, personalidad y voz</li>
-        <li data-state="done">Públicos, redes y voz en dos idiomas</li>
-        <li data-state="done">Nombre: Pa'l Filo, con sistema de logo</li>
-        <li data-state="review">Identidad 9.0 "La calle de la Costa": validar</li>
-        <li data-state="review">Nombres nuevos de los platos: validar</li>
-        <li>Fotos reales de la salchicosteña y la pizza con la guía de fondo, luz y ángulo</li>
-        <li>Historia de origen: quién cocina y por qué lo buscaban en la Costa</li>
-        <li>Revisar marca registrada en San José y asegurar @palfilo y palfilo.com</li>
-        <li>Aplicar la marca a la web del consumidor, los empaques y DoorDash</li>
-      </ul>
     </section>
 
   </main>
@@ -535,12 +624,12 @@
   <footer class="footer">
     <div class="footer__placa">
       <p class="letrero footer__line" style="--n: var(--mango);">¡Coma que hay más!</p>
-      <p class="footer__meta">Guía de marca, borrador 9.0. San José, California.</p>
+      <p class="footer__meta">Guía de marca, borrador 9.1. San José, California.</p>
     </div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/main.js?v=9.0" defer></script>
+  <script src="js/main.js?v=9.1" defer></script>
 </body>
 </html>
