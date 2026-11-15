@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Bolsa de dulces"><title>Bolsa de dulces</title><g fill="none" stroke="#FFF1DC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M30 46 H90 L84 104 H36 Z"/>
+<path d="M40 46 C40 30 80 30 80 46" stroke-width="2.5"/>
+<path d="M50 64 a8 6 0 1 0 0.1 0 Z" stroke="#FF2440"/><path d="M42 64 l-6 -4 v8 Z M58 64 l6 -4 v8 Z" stroke="#FF2440" stroke-width="2.5"/>
+<path d="M72 82 a8 6 0 1 0 0.1 0 Z" stroke="#00B9FF"/><path d="M64 82 l-6 -4 v8 Z M80 82 l6 -4 v8 Z" stroke="#00B9FF" stroke-width="2.5"/>
+<path d="M76 30 V14 M76 14 a6 6 0 1 1 6 6" stroke="#7CFF6B" stroke-width="3"/></g></svg>

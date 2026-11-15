@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Buñuelos"><title>Buñuelos</title><g fill="none" stroke="#FFF1DC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 92 C30 106 90 106 102 92 Z"/>
+<circle cx="44" cy="74" r="15" stroke="#FFB700"/><circle cx="76" cy="74" r="15" stroke="#FFB700"/><circle cx="60" cy="50" r="15" stroke="#FFB700"/>
+<path d="M40 70 h1 M48 78 h1 M72 70 h1 M80 78 h1 M56 46 h1 M64 54 h1" stroke="#FFB700" stroke-width="3"/>
+<path d="M88 30 l3 6 l6 1 l-5 4 l1 6 l-5 -3 l-5 3 l1 -6 l-5 -4 l6 -1 Z" stroke="#FFB700" stroke-width="2.5"/></g></svg>

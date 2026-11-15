@@ -338,3 +338,13 @@
     });
   });
 })();
+
+/* Muestras: segmento y opciones de plato se pueden tocar */
+(function () {
+  document.querySelectorAll(".muestra .segmento, .muestra .opciones").forEach(function (g) {
+    g.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b || !g.contains(b)) return;
+      g.querySelectorAll(":scope > button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    });
+  });
+})();

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Acordeón"><title>Acordeón</title><g fill="none" stroke="#FFF1DC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<rect x="16" y="32" width="24" height="60" rx="4"/><rect x="80" y="32" width="24" height="60" rx="4"/>
+<path d="M40 36 L45 90 L50 36 L55 90 L60 36 L65 90 L70 36 L75 90 L80 36" stroke="#FF2440"/><path d="M40 32 H80 M40 92 H80" stroke="#FF2440" stroke-width="2.5"/>
+<circle cx="24" cy="44" r="2.2"/><circle cx="32" cy="44" r="2.2"/><circle cx="24" cy="56" r="2.2"/><circle cx="32" cy="56" r="2.2"/><circle cx="24" cy="68" r="2.2"/><circle cx="32" cy="68" r="2.2"/><circle cx="24" cy="80" r="2.2"/><circle cx="32" cy="80" r="2.2"/>
+<path d="M88 44 h8 M88 54 h8 M88 64 h8" stroke="#FFB700" stroke-width="2.5"/>
+<path d="M28 32 C28 18 92 18 92 32" stroke-width="2.5"/></g></svg>

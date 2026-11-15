@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Calabaza con vueltiao"><title>Calabaza con vueltiao</title><g fill="none" stroke="#FFF1DC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M60 48 C40 44 22 54 22 76 C22 96 40 106 60 104 C80 106 98 96 98 76 C98 54 80 44 60 48 Z" stroke="#FFB700"/>
+<path d="M60 50 C50 62 50 92 60 104 M60 50 C70 62 70 92 60 104" stroke="#FFB700" stroke-width="2.5"/>
+<path d="M42 72 l6 -6 l6 6 M66 72 l6 -6 l6 6 M44 86 C52 94 68 94 76 86" stroke="#FF2440" stroke-width="2.5"/>
+<ellipse cx="60" cy="40" rx="26" ry="6"/><path d="M48 40 C48 30 52 22 60 22 C68 22 72 30 72 40"/>
+<path d="M50 32 l3 -3 l3 3 l3 -3 l3 3 l3 -3 l3 3" stroke="#FFB700" stroke-width="2"/></g></svg>
