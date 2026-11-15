@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0D0919">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/tokens.css?v=9.4">
-  <link rel="stylesheet" href="css/styles.css?v=9.7">
+  <link rel="stylesheet" href="css/styles.css?v=10.0">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -33,18 +33,38 @@
   </nav>
 
   <!-- ===================== PORTADA: el cartel ===================== -->
-  <header class="cartel">
-    <!-- El titular centrado bajo el logo, con una figura de Carnaval a cada lado -->
-    <h1 class="letrero cartel__titulo cartel__titulo--filo">
-      <span class="cartel__linea" style="--n: var(--mango);">¿Tienes</span>
-      <span class="cartel__linea" style="--n: var(--cian);">filo?</span>
-    </h1>
-
-    <div class="cartel__pie">
-      <p class="cartel__bajada">La comida rápida de la calle costeña, en San José, California. Esta es la guía interna de la marca: el alma, el mercado, la expresión y el producto.</p>
-      <a class="btn" href="#alma" data-action="show-section" data-target="alma">Empezar por el alma</a>
-      <p class="cartel__nota">Borrador 9.1: la guía en cuatro partes.</p>
+  <header class="cartel portada">
+    <div class="portada__texto">
+      <h1 class="letrero cartel__titulo cartel__titulo--filo">
+        <span class="cartel__linea" style="--n: var(--mango);">¿Tienes</span>
+        <span class="cartel__linea" style="--n: var(--cian);">filo?</span>
+      </h1>
+      <p class="cartel__bajada">La comida rápida de la calle costeña, en San José, California. Esta guía reúne todo lo que Pa'l Filo es, a quién le habla, cómo se ve y qué vende.</p>
     </div>
+
+    <figure class="portada__criatura" aria-hidden="true">
+      <img src="img/torito-neon.webp?v=10.0" alt="" width="853" height="791">
+    </figure>
+
+    <nav class="indice" aria-label="Las cuatro partes de la guía">
+      <a class="indice__parte" href="#alma" data-action="show-section" data-target="alma" style="--n: var(--mango);">
+        <span class="indice__nombre">El alma</span>
+        <span class="indice__que">Esencia, valores, personalidad y voz</span>
+      </a>
+      <a class="indice__parte" href="#publicos" data-action="show-section" data-target="publicos" style="--n: var(--tomate);">
+        <span class="indice__nombre">Mercado</span>
+        <span class="indice__que">Públicos, competencia y canales</span>
+      </a>
+      <a class="indice__parte" href="#identidad" data-action="show-section" data-target="identidad" style="--n: var(--cian);">
+        <span class="indice__nombre">Expresión</span>
+        <span class="indice__que">Reglas, logo, colores y tipografía</span>
+      </a>
+      <a class="indice__parte" href="#menu" data-action="show-section" data-target="menu" style="--n: var(--lima);">
+        <span class="indice__nombre">Producto</span>
+        <span class="indice__que">Platos, nombres, salsas y cómo se vende</span>
+      </a>
+    </nav>
+    <p class="cartel__nota">Borrador 10.0</p>
   </header>
 
 
@@ -85,6 +105,7 @@
           <p>No somos fast food barato. Somos comida de calle costeña, y en la Costa eso es cultura y orgullo. Lo rápido es solo la forma de servirla.</p>
         </article>
       </div>
+        <nav class="pasos" aria-label="Seguir leyendo"><span></span><a class="paso paso--sigue" href="#valores" data-action="show-section" data-target="valores"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Valores</span></a></nav>
       </div>
       <div class="subsec" id="valores" role="tabpanel" aria-labelledby="st-valores" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -160,6 +181,7 @@
           </div>
         </li>
       </ul>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#alma" data-action="show-section" data-target="alma"><span class="paso__dir">Anterior</span><span class="paso__nombre">Esencia</span></a><a class="paso paso--sigue" href="#personalidad" data-action="show-section" data-target="personalidad"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Personalidad</span></a></nav>
       </div>
       <div class="subsec" id="personalidad" role="tabpanel" aria-labelledby="st-personalidad" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -190,6 +212,7 @@
           </ul>
         </article>
       </div>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#valores" data-action="show-section" data-target="valores"><span class="paso__dir">Anterior</span><span class="paso__nombre">Valores</span></a><a class="paso paso--sigue" href="#voz" data-action="show-section" data-target="voz"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Voz</span></a></nav>
       </div>
       <div class="subsec" id="voz" role="tabpanel" aria-labelledby="st-voz" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -247,6 +270,7 @@
           <p>Inglés claro y la palabra costeña como gancho, explicada una vez: <em>"Hungry? We got filo. Filo (n.): Colombian for starving."</em></p>
         </article>
       </div>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#personalidad" data-action="show-section" data-target="personalidad"><span class="paso__dir">Anterior</span><span class="paso__nombre">Personalidad</span></a><a class="paso paso--sigue" href="#pendientes" data-action="show-section" data-target="pendientes"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Hoja de ruta</span></a></nav>
       </div>
       <div class="subsec" id="pendientes" role="tabpanel" aria-labelledby="st-pendientes" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -264,6 +288,7 @@
         <li>Revisar marca registrada en San José y asegurar @palfilo y palfilo.com</li>
         <li>Aplicar la marca a la web del consumidor, los empaques y DoorDash</li>
       </ul>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#voz" data-action="show-section" data-target="voz"><span class="paso__dir">Anterior</span><span class="paso__nombre">Voz</span></a><a class="paso paso--sigue" href="#publicos" data-action="show-section" data-target="publicos"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Públicos</span><small>Mercado</small></a></nav>
       </div>
     </section>
     <!-- ===================== MERCADO ===================== -->
@@ -297,6 +322,7 @@
           <p><strong>Busca</strong> volver a su tierra por un rato. <strong>Teme</strong> que sea costeño de mentiras. <strong>Le damos</strong> el sabor de allá, sin adaptar nada. Si él lo aprueba, el resto confía.</p>
         </article>
       </div>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#pendientes" data-action="show-section" data-target="pendientes"><span class="paso__dir">Anterior</span><span class="paso__nombre">Hoja de ruta</span><small>El alma</small></a><a class="paso paso--sigue" href="#competencia" data-action="show-section" data-target="competencia"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Competencia</span></a></nav>
       </div>
       <div class="subsec" id="competencia" role="tabpanel" aria-labelledby="st-competencia" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -332,6 +358,7 @@
         </article>
       </div>
       <p class="hint">Fuentes: listados públicos de Yelp, MapQuest, DoorDash y prensa local (noviembre de 2026). Conviene visitarlos y probar antes de tomar decisiones de precio.</p>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#publicos" data-action="show-section" data-target="publicos"><span class="paso__dir">Anterior</span><span class="paso__nombre">Públicos</span></a><a class="paso paso--sigue" href="#redes" data-action="show-section" data-target="redes"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Canales</span></a></nav>
       </div>
       <div class="subsec" id="redes" role="tabpanel" aria-labelledby="st-redes" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -362,6 +389,7 @@
           <p>El canal que hoy vende, atendido a mano. Siguiente paso: catálogo, respuestas rápidas en los dos idiomas y el especial de la semana.</p>
         </article>
       </div>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#competencia" data-action="show-section" data-target="competencia"><span class="paso__dir">Anterior</span><span class="paso__nombre">Competencia</span></a><a class="paso paso--sigue" href="#identidad" data-action="show-section" data-target="identidad"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Reglas</span><small>Expresión</small></a></nav>
       </div>
     </section>
     <!-- ===================== EXPRESIÓN ===================== -->
@@ -417,6 +445,7 @@
       </ul>
 
 
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#redes" data-action="show-section" data-target="redes"><span class="paso__dir">Anterior</span><span class="paso__nombre">Canales</span><small>Mercado</small></a><a class="paso paso--sigue" href="#logo" data-action="show-section" data-target="logo"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Logo</span></a></nav>
       </div>
       <div class="subsec" id="logo" role="tabpanel" aria-labelledby="st-logo" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -435,6 +464,7 @@
       <p class="hint">Tamaño mínimo: 120 px de ancho para el principal; debajo de eso, el simple o el ícono. Espacio libre alrededor: la altura de la placa.</p>
 
 
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#identidad" data-action="show-section" data-target="identidad"><span class="paso__dir">Anterior</span><span class="paso__nombre">Reglas</span></a><a class="paso paso--sigue" href="#colores" data-action="show-section" data-target="colores"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Colores</span></a></nav>
       </div>
       <div class="subsec" id="colores" role="tabpanel" aria-labelledby="st-colores" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -454,6 +484,7 @@
       <p class="hint">Toca un color para copiar su código.</p>
 
 
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#logo" data-action="show-section" data-target="logo"><span class="paso__dir">Anterior</span><span class="paso__nombre">Logo</span></a><a class="paso paso--sigue" href="#letras" data-action="show-section" data-target="letras"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Tipografía</span></a></nav>
       </div>
       <div class="subsec" id="letras" role="tabpanel" aria-labelledby="st-letras" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -473,6 +504,7 @@
           <p>Para leer y para los subtítulos. En los subtítulos va en negrita con un neón suave; el texto corrido, en crema sobre noche.</p>
         </article>
       </div>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#colores" data-action="show-section" data-target="colores"><span class="paso__dir">Anterior</span><span class="paso__nombre">Colores</span></a><a class="paso paso--sigue" href="#menu" data-action="show-section" data-target="menu"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Platos héroe</span><small>Producto</small></a></nav>
       </div>
     </section>
     <!-- ===================== PRODUCTO ===================== -->
@@ -507,6 +539,7 @@
       </div>
 
 
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#letras" data-action="show-section" data-target="letras"><span class="paso__dir">Anterior</span><span class="paso__nombre">Tipografía</span><small>Expresión</small></a><a class="paso paso--sigue" href="#nombres" data-action="show-section" data-target="nombres"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Nombres</span></a></nav>
       </div>
       <div class="subsec" id="nombres" role="tabpanel" aria-labelledby="st-nombres" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -542,6 +575,7 @@
       </div>
 
 
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#menu" data-action="show-section" data-target="menu"><span class="paso__dir">Anterior</span><span class="paso__nombre">Platos héroe</span></a><a class="paso paso--sigue" href="#salsas" data-action="show-section" data-target="salsas"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Salsas</span></a></nav>
       </div>
       <div class="subsec" id="salsas" role="tabpanel" aria-labelledby="st-salsas" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -553,6 +587,7 @@
         <img src="img/salsa-rosada.svg?v=9.0" alt="Salsa rosada"><img src="img/salsa-verde.svg?v=9.0" alt="Salsa verde"><img src="img/salsa-casa.svg?v=9.0" alt="Salsa Pa'l Filo">
         <p>Siete salsas y un gesto: el chorro en zigzag por encima. Es el mismo dibujo del faldón de la carpa, y por eso es la seña de la marca. Rosada, verde, BBQ, tomate, chile, tocino y la Pa'l Filo de la casa.</p>
       </div>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#nombres" data-action="show-section" data-target="nombres"><span class="paso__dir">Anterior</span><span class="paso__nombre">Nombres</span></a><a class="paso paso--sigue" href="#comida" data-action="show-section" data-target="comida"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Cómo se muestra</span></a></nav>
       </div>
       <div class="subsec" id="comida" role="tabpanel" aria-labelledby="st-comida" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -576,6 +611,7 @@
           </div>
         </li>
       </ul>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#salsas" data-action="show-section" data-target="salsas"><span class="paso__dir">Anterior</span><span class="paso__nombre">Salsas</span></a><a class="paso paso--sigue" href="#aplicaciones" data-action="show-section" data-target="aplicaciones"><span class="paso__dir">Siguiente</span><span class="paso__nombre">Así se vende</span></a></nav>
       </div>
       <div class="subsec" id="aplicaciones" role="tabpanel" aria-labelledby="st-aplicaciones" tabindex="-1" hidden>
       <header class="chapter__head">
@@ -616,6 +652,7 @@
           <figcaption>Sticker para cerrar la bolsa</figcaption>
         </figure>
       </div>
+        <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#comida" data-action="show-section" data-target="comida"><span class="paso__dir">Anterior</span><span class="paso__nombre">Cómo se muestra</span></a><span></span></nav>
       </div>
     </section>
 
@@ -630,6 +667,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/main.js?v=9.1" defer></script>
+  <script src="js/main.js?v=10.0" defer></script>
 </body>
 </html>

@@ -1270,3 +1270,211 @@ a {
 .grupo__eyebrow { text-shadow: none; }
 .menu__list { padding-bottom: 0; }
 .menu__lado { padding-top: 10px; }
+
+/* ==========================================================
+   10.0: CONTENIDO REORGANIZADO
+   Portada editorial con índice de las cuatro partes, lectura en
+   dos columnas (índice fijo + texto), criaturas de neón como
+   único acento de luz y un "siguiente" al final de cada sección.
+   El header (carpa, letreros, sello) y el footer no cambian.
+   ========================================================== */
+:root {
+  --ancho-guia: 1200px;
+  --ancho-texto: 66ch;
+  --ease-suave: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ---------- Portada ---------- */
+.cartel.portada {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-areas:
+    "texto criatura"
+    "indice indice"
+    "nota nota";
+  align-items: center;
+  column-gap: var(--space-xl);
+  row-gap: var(--space-xl);
+  width: min(100% - 2 * var(--space-md), var(--ancho-guia));
+  margin-inline: auto;
+  padding: calc(var(--space-2xl) + 90px) 0 var(--space-xl);
+  text-align: left;
+  overflow: visible;
+}
+.cartel.portada::before { display: none; }
+.portada__texto { grid-area: texto; display: grid; gap: var(--space-md); justify-items: start; }
+.portada .cartel__titulo--filo { font-size: clamp(3.4rem, 1.4rem + 6vw, 7.5rem); transform-origin: left center; }
+.portada .cartel__bajada { max-width: 44ch; margin: 0; font-size: var(--step-1); line-height: 1.55; color: var(--text-secondary); text-align: left; }
+.portada .cartel__nota { grid-area: nota; margin: 0; text-align: left; opacity: 0.6; }
+
+/* La criatura: un solo punto de luz, que respira despacio */
+.portada__criatura {
+  grid-area: criatura;
+  position: relative;
+  margin: 0;
+  justify-self: center;
+  width: min(100%, 440px);
+}
+.portada__criatura::before {
+  content: "";
+  position: absolute;
+  inset: 8% 4%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(255 36 64 / 0.22), rgb(0 185 255 / 0.08) 60%, transparent);
+  filter: blur(20px);
+}
+.portada__criatura img { position: relative; display: block; width: 100%; height: auto; rotate: -5deg; }
+@media (prefers-reduced-motion: no-preference) {
+  .portada__criatura img { animation: respirar 9s var(--ease-suave) infinite alternate; }
+}
+@keyframes respirar {
+  from { translate: 0 0; rotate: -5deg; filter: brightness(0.95); }
+  to { translate: 0 -12px; rotate: -2deg; filter: brightness(1.08); }
+}
+
+/* Índice de las cuatro partes */
+.indice {
+  grid-area: indice;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+.indice__parte {
+  display: grid;
+  gap: 0.35rem;
+  padding: var(--space-sm) 0 var(--space-xs);
+  border-top: 2px solid color-mix(in srgb, var(--n) 55%, transparent);
+  color: var(--crema);
+  text-decoration: none;
+  transition: border-color 0.2s var(--ease-suave), translate 0.2s var(--ease-suave);
+}
+.indice__nombre { font-family: var(--font-display); font-size: var(--step-2); line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; transition: color 0.2s var(--ease-suave); }
+.indice__que { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.4; }
+.indice__parte:hover { border-color: var(--n); translate: 0 -2px; }
+.indice__parte:hover .indice__nombre { color: var(--n); }
+.indice__parte:focus-visible { outline: 3px solid var(--n); outline-offset: 6px; border-radius: 4px; }
+
+/* ---------- Cada parte: índice fijo a la izquierda, texto a la derecha ---------- */
+.chapter.grupo {
+  position: relative;
+  width: min(100% - 2 * var(--space-md), var(--ancho-guia));
+  padding-top: var(--space-xl);
+}
+.grupo > * { position: relative; z-index: 1; }
+.cenefa { display: none; }
+.chapter__head { margin-bottom: var(--space-lg); }
+.subsec .chapter__title { font-size: clamp(2.2rem, 1.5rem + 2.4vw, 3.4rem); }
+.subsec .chapter__intro { max-width: var(--ancho-texto); }
+.subsec > p, .subsec .manifiesto { max-width: var(--ancho-texto); }
+
+@media (min-width: 1000px) {
+  .chapter.grupo {
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: start;
+  }
+  .grupo__head {
+    grid-column: 1;
+    grid-row: 1 / span 40;
+    position: sticky;
+    top: 150px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    gap: 0.75rem;
+  }
+  .grupo__eyebrow { font-size: 2rem; }
+  .grupo__intro { font-size: 0.95rem; line-height: 1.5; }
+  .subsec { grid-column: 2; min-width: 0; }
+
+  /* El submenú pasa a ser un índice vertical, sin pastillas */
+  .subnav { flex-direction: column; gap: 2px; margin-top: var(--space-sm); }
+  .subnav__btn {
+    text-align: left;
+    border: 0;
+    border-left: 2px solid rgb(255 241 220 / 0.12);
+    border-radius: 0;
+    padding: 0.55rem 0.9rem;
+    color: var(--text-secondary);
+    background: transparent;
+    box-shadow: none;
+    transition: color 0.2s var(--ease-suave), border-color 0.2s var(--ease-suave), background 0.2s var(--ease-suave);
+  }
+  .subnav__btn:hover { color: var(--crema); border-left-color: rgb(255 241 220 / 0.4); }
+  .subnav__btn[aria-selected="true"] {
+    color: var(--n);
+    background: linear-gradient(90deg, color-mix(in srgb, var(--n) 12%, transparent), transparent);
+    border-left-color: var(--n);
+    box-shadow: none;
+  }
+}
+.subnav__btn:focus-visible { outline: 3px solid var(--n); outline-offset: 2px; }
+
+/* Criaturas de neón: una por parte, a un lado y casi apagadas */
+@media (min-width: 1000px) {
+  .chapter.grupo::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 6rem;
+    right: max(-14vw, (100vw - 100%) / -2 + 1rem);
+    width: min(30vw, 420px);
+    aspect-ratio: 1;
+    background: var(--criatura, none) center / contain no-repeat;
+    opacity: 0.1;
+    filter: saturate(1.2);
+    pointer-events: none;
+  }
+  #g-alma { --criatura: url("../img/marimonda-neon.webp?v=10.0"); }
+  #g-mercado { --criatura: url("../img/torito-neon.webp?v=10.0"); }
+  #g-expresion { --criatura: url("../img/sombrero-vueltiao-neon.webp?v=10.0"); }
+}
+
+/* Al final de cada sección: seguir leyendo */
+.pasos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--linea-suave);
+}
+.paso {
+  display: grid;
+  gap: 0.2rem;
+  padding: var(--space-xs) 0;
+  color: var(--crema);
+  text-decoration: none;
+}
+.paso--sigue { text-align: right; justify-items: end; }
+.paso__dir { font-size: 0.85rem; color: var(--text-secondary); }
+.paso__nombre { font-family: var(--font-display); font-size: var(--step-1); text-transform: uppercase; letter-spacing: 0.02em; transition: color 0.2s var(--ease-suave); }
+.paso small { font-size: 0.8rem; color: var(--text-secondary); }
+.paso:hover .paso__nombre { color: var(--n); }
+.paso:focus-visible { outline: 3px solid var(--n); outline-offset: 4px; border-radius: 4px; }
+
+/* ---------- Pantallas medianas y celular ---------- */
+@media (max-width: 999px) {
+  .cartel.portada {
+    grid-template-columns: 1fr;
+    grid-template-areas: "criatura" "texto" "indice" "nota";
+    padding-top: calc(var(--space-xl) + 120px);
+    row-gap: var(--space-lg);
+  }
+  .portada__criatura { width: min(60%, 280px); }
+  .indice { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .indice { grid-template-columns: 1fr; gap: var(--space-xs); }
+  .pasos { grid-template-columns: 1fr; }
+  .paso--sigue { text-align: left; justify-items: start; }
+}
+.portada__texto > * { grid-area: auto; }
+.portada__criatura img { opacity: 0.9; }
+@media (min-width: 1000px) {
+  /* deja libre el espacio donde cuelga el sello del header */
+  .chapter.grupo { padding-top: calc(var(--space-xl) + 90px); }
+  .grupo__head { top: 190px; }
+  .chapter.grupo::after { top: 26rem; opacity: 0.09; }
+}
+.chapter.grupo[hidden] { display: none; }
