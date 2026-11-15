@@ -1552,37 +1552,6 @@ a {
 /* ==========================================================
    10.2: LETREROS MINIMAL, SELLO CENTRADO, LEMA
    ========================================================== */
-/* Letreros: siguen colgando del cordel, pero ahora son una raya de
-   color de la parte y el nombre en Lilita, como el índice de la portada */
-.menu__tab,
-.menu__tab:hover,
-.menu__tab[aria-selected="true"] {
-  background: transparent;
-  border: 0;
-  border-top: 3px solid color-mix(in srgb, var(--n) 60%, transparent);
-  border-radius: 0;
-  box-shadow: none;
-  color: var(--crema);
-  padding: 0.55rem 0.4rem 0.2rem;
-  rotate: 0deg;
-}
-.menu__item > .menu__tab { font-size: 1.3rem; letter-spacing: 0.02em; }
-.menu__tab::after { top: -6px; background: var(--n); width: 8px; height: 8px; }
-.menu__tab::before { background: linear-gradient(rgb(255 241 220 / 0.1), color-mix(in srgb, var(--n) 70%, transparent)); }
-.menu__tab:hover { color: var(--n); border-top-color: var(--n); }
-.menu__tab[aria-selected="true"] {
-  color: var(--n);
-  border-top: 4px solid var(--n);
-  text-shadow: 0 0 14px color-mix(in srgb, var(--n) 55%, transparent);
-  box-shadow: 0 -6px 14px -6px color-mix(in srgb, var(--n) 80%, transparent);
-}
-.menu__tab[aria-selected="true"]::before { background: linear-gradient(rgb(255 241 220 / 0.1), var(--n)); }
-.menu__tab[aria-selected="true"]::after { background: var(--n); }
-@media (prefers-reduced-motion: no-preference) {
-  .menu__tab[aria-selected="true"] { animation: columpio 0.9s var(--ease-out) both; }
-}
-.menu__lado { gap: 44px; }
-
 /* Al bajar, el sello se recoge y queda centrado en la carpa */
 .menu--compacto .menu__sello { top: calc(50% + 18px); translate: -50% -50%; }
 
@@ -1663,28 +1632,11 @@ a {
   .carrusel-neon__item { transition: opacity 0.2s; translate: 0 0; rotate: 0deg; scale: 1; }
 }
 
-/* ---------- Header: letreros que se leen sobre la carpa ---------- */
-/* Cada letrero es una tablilla de noche translúcida, con la raya de su
-   color arriba (donde amarra el cordel) y el nombre en Lilita. */
-.menu__tab,
-.menu__tab:hover,
-.menu__tab[aria-selected="true"] {
-  background: rgb(13 9 25 / 0.78);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-  border-radius: 0 0 10px 10px;
-  padding: 0.5rem 1.05rem 0.42rem;
-}
-.menu__item > .menu__tab { font-size: 1.15rem; }
-.menu__tab:hover { background: rgb(13 9 25 / 0.9); }
-.menu__tab[aria-selected="true"] {
-  background: color-mix(in srgb, var(--n) 14%, rgb(13 9 25 / 0.92));
-  text-shadow: none;
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--n) 30%, transparent), 0 -4px 16px -6px var(--n);
-}
-.menu__lado { gap: 26px; }
-/* el submenú sale debajo de la tablilla, con la raya de la parte */
-.menu__sub { border-top: 3px solid var(--n, var(--mango)); border-radius: 0 0 12px 12px; box-shadow: 0 18px 40px rgb(0 0 0 / 0.55); }
-
 .cartel.portada { padding-bottom: var(--space-md); row-gap: var(--space-md); }
 @media (min-width: 1000px) { .cartel.portada + main .chapter.grupo, main .chapter.grupo { padding-top: var(--space-xl); } }
+
+/* 10.5: carrusel sin círculo ni puntos, criaturas más grandes */
+.carrusel-neon { width: min(100%, 560px); }
+.carrusel-neon__ventana { background: none; box-shadow: none; border-radius: 0; overflow: visible; aspect-ratio: 1.15; }
+.carrusel-neon__item { inset: 0; width: 100%; height: 100%; }
+@media (max-width: 999px) { .carrusel-neon { width: min(90%, 380px); } }
