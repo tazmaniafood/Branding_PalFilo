@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Balcón colonial"><title>Balcón colonial</title><g fill="none" stroke="#FFF1DC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20 30 H100 M24 30 V108 M96 30 V108 M18 108 H102"/>
+<path d="M18 30 l6 -8 h72 l6 8" stroke-width="2.5"/>
+<path d="M44 62 V44 a16 16 0 0 1 32 0 V62"/>
+<path d="M36 62 H84 V80 H36 Z" stroke="#00B9FF"/>
+<path d="M44 62 V80 M52 62 V80 M60 62 V80 M68 62 V80 M76 62 V80" stroke="#00B9FF" stroke-width="2.5"/>
+<circle cx="36" cy="58" r="3" stroke="#FF2440"/><circle cx="42" cy="55" r="3" stroke="#FF2440"/><circle cx="84" cy="58" r="3" stroke="#FF2440"/><circle cx="78" cy="55" r="3" stroke="#FF2440"/>
+<path d="M50 108 V92 H70 V108"/></g></svg>
