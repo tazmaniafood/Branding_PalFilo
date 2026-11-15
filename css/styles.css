@@ -1262,3 +1262,11 @@ a {
   box-shadow: 4px 5px 0 var(--uva), 0 0 18px rgb(255 183 0 / 0.45);
 }
 .menu__tab:focus-visible { outline: 3px solid var(--cian); outline-offset: 3px; }
+
+/* 9.7: títulos y subtítulos sin sombra; letreros centrados en la carpa */
+.letrero, .letrero > span,
+.nota h3, .voice__words h3, .regla h3, .lineup .value__idea, .swatch__name, .app figcaption,
+.value__head:hover .value__name, .value[data-state="open"] .value__name,
+.grupo__eyebrow { text-shadow: none; }
+.menu__list { padding-bottom: 0; }
+.menu__lado { padding-top: 10px; }
