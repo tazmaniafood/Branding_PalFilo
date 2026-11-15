@@ -1640,3 +1640,20 @@ a {
 .carrusel-neon__ventana { background: none; box-shadow: none; border-radius: 0; overflow: visible; aspect-ratio: 1.15; }
 .carrusel-neon__item { inset: 0; width: 100%; height: 100%; }
 @media (max-width: 999px) { .carrusel-neon { width: min(90%, 380px); } }
+
+/* 10.6: el lema vuelve a ser letrero de picó (Lilita con contorno crema,
+   sombra uva en bloque y brillo), como el titular original */
+.portada__lema { color: inherit; max-width: none; text-transform: uppercase; }
+.letrero.portada__lema > .portada__linea {
+  display: block;
+  color: var(--n);
+  -webkit-text-stroke: 0.07em var(--crema);
+  paint-order: stroke fill;
+  text-shadow:
+    0.06em 0.06em 0 var(--uva),
+    0.1em 0.1em 0 var(--uva),
+    0 0 18px color-mix(in srgb, var(--n) 75%, transparent),
+    0 0 42px color-mix(in srgb, var(--n) 45%, transparent);
+}
+.letrero.portada__lema > .portada__linea + .portada__linea { font-size: 0.62em; margin-top: 0.12em; }
+.letrero.portada__lema { font-size: clamp(3.4rem, 1.4rem + 6vw, 7.2rem); line-height: 0.92; }
