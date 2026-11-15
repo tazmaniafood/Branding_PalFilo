@@ -1678,3 +1678,10 @@ a {
 /* 11.0: el letrero de picó vuelve completo (contorno crema, sombra uva, brillo) */
 .letrero.regla__letra { color: var(--n); -webkit-text-stroke: 0.07em var(--crema); paint-order: stroke fill;
   text-shadow: 0.06em 0.06em 0 var(--uva), 0.1em 0.1em 0 var(--uva), 0 0 18px color-mix(in srgb, var(--n) 75%, transparent), 0 0 42px color-mix(in srgb, var(--n) 45%, transparent); }
+
+/* 11.1: letrero de picó sin brillo (contorno crema + sombra uva) en todos los títulos */
+.letrero, .letrero > span, .nota .specimen__big--picotera, .letrero.regla__letra {
+  color: var(--n); -webkit-text-stroke: 0.07em var(--crema); paint-order: stroke fill;
+  text-shadow: 0.06em 0.06em 0 var(--uva), 0.1em 0.1em 0 var(--uva);
+}
+.letrero.portada__lema, .letrero.portada__lema > .portada__linea { color: var(--crema); -webkit-text-stroke: 0; text-shadow: none; }
