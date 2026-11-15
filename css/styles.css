@@ -1669,10 +1669,12 @@ a {
 .nota .specimen__big--body { color: var(--crema); }
 
 /* 10.9: letrero de picó sin sombra ni brillo; portada en Lilita plana crema; regla sin blanco puro */
-.nota .specimen__big--picotera { text-shadow: none; }
 .letrero.portada__lema > .portada__linea { color: var(--crema); -webkit-text-stroke: 0; text-shadow: none; }
 .regla__demo--crema { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 8px; }
 .regla__demo--crema span { display: grid; place-items: end start; padding: 6px 8px; border-radius: 6px; background: var(--crema); color: var(--noche); font-weight: 800; font-size: 0.75rem; }
 .regla__demo--crema span.is-no { background: #FFFFFF; position: relative; opacity: 0.55; }
 .regla__demo--crema span.is-no::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - 1.5px), var(--tomate) calc(50% - 1.5px) calc(50% + 1.5px), transparent calc(50% + 1.5px)); }
-.letrero.regla__letra { text-shadow: none; }
+
+/* 11.0: el letrero de picó vuelve completo (contorno crema, sombra uva, brillo) */
+.letrero.regla__letra { color: var(--n); -webkit-text-stroke: 0.07em var(--crema); paint-order: stroke fill;
+  text-shadow: 0.06em 0.06em 0 var(--uva), 0.1em 0.1em 0 var(--uva), 0 0 18px color-mix(in srgb, var(--n) 75%, transparent), 0 0 42px color-mix(in srgb, var(--n) 45%, transparent); }
