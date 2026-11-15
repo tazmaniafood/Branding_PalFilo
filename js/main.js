@@ -181,6 +181,14 @@
       tab.setAttribute("aria-selected", String(selected));
       tab.setAttribute("tabindex", selected ? "0" : "-1");
       if (selected && opts.focusTab) tab.focus();
+      // En celular la fila de pestañas se desliza: llevar la activa a la vista
+      if (selected) {
+        var fila = tab.closest(".menu__list");
+        if (fila && fila.scrollWidth > fila.clientWidth) {
+          var item = tab.closest(".menu__item") || tab;
+          fila.scrollTo({ left: item.offsetLeft - (fila.clientWidth - item.offsetWidth) / 2, behavior: "smooth" });
+        }
+      }
     });
     $all(".subnav__btn", grupo).forEach(function (b) {
       var on = b.getAttribute("data-target") === sub.id;

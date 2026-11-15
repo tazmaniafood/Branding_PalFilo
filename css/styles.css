@@ -1703,3 +1703,41 @@ html { font-synthesis: none; }
 .nombres td b { text-transform: uppercase; letter-spacing: 0.02em; font-size: 1.05rem; }
 .nombres td:last-child { color: color-mix(in srgb, var(--cian) 35%, var(--crema)); }
 .nombres td:last-child { font-style: italic; }
+
+/* 11.4: Tecnología y Economía */
+.subsec .sub { margin: var(--space-lg, 2.5rem) 0 var(--space-sm, 1rem); }
+.subsec .chapter__head + .sub { margin-top: 0; }
+.datos { width: 100%; border-collapse: collapse; min-width: 560px; margin-bottom: var(--space-lg, 2.5rem); }
+.datos caption { text-align: left; padding: 0 0.9rem 0.6rem; font-weight: 900; color: var(--n, var(--mango)); caption-side: top; }
+.datos th, .datos td { text-align: left; padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--linea-suave); vertical-align: top; }
+.datos thead th { font-weight: 800; color: var(--text-secondary); font-size: var(--step--1); border-bottom: 2px solid color-mix(in srgb, var(--n, var(--mango)) 70%, transparent); }
+.datos td:first-child { font-weight: 800; color: var(--crema); }
+.datos td { color: var(--text-secondary); }
+.nota-pie { font-size: var(--step--1); color: var(--text-secondary); max-width: 68ch; margin-top: var(--space-sm, 1rem); }
+.nota--aviso { border-top-color: var(--tomate); max-width: 72ch; }
+.flujo { list-style: none; margin: 0 0 var(--space-md, 1.5rem); padding: 0; display: flex; flex-wrap: wrap; gap: 14px 30px; counter-reset: paso; }
+.flujo__paso { position: relative; counter-increment: paso; flex: 0 1 180px; min-height: 108px; padding: 14px 14px 12px; border-radius: 14px;
+  background: color-mix(in srgb, var(--n) 9%, var(--noche)); border: 1.5px solid color-mix(in srgb, var(--n) 55%, transparent); display: grid; align-content: start; gap: 4px; }
+.flujo__paso::before { content: counter(paso); font-family: var(--font-display); font-size: 1.1rem; color: var(--n); line-height: 1; }
+.flujo__paso b { color: var(--crema); font-weight: 800; }
+.flujo__paso span { color: var(--text-secondary); font-size: var(--step--1); line-height: 1.35; }
+.flujo__paso:not(:last-child)::after { content: ""; position: absolute; right: -24px; top: 50%; width: 16px; height: 16px; translate: 0 -50%;
+  background: var(--crema); opacity: 0.55; clip-path: polygon(0 20%, 55% 20%, 55% 0, 100% 50%, 55% 100%, 55% 80%, 0 80%); }
+@media (max-width: 640px) {
+  .flujo { flex-direction: column; gap: 22px; }
+  .flujo__paso { flex: none; min-height: 0; }
+  .flujo__paso:not(:last-child)::after { right: auto; left: 50%; top: auto; bottom: -19px; translate: -50% 0; rotate: 90deg; }
+}
+/* 11.4: seis pestañas, tres a cada lado del sello */
+@media (min-width: 981px) {
+  .menu__list { grid-template-columns: 1fr 280px 1fr; width: min(100% - 2rem, 1640px); }
+  .menu__lado { gap: clamp(10px, 1.5vw, 34px); }
+}
+@media (min-width: 981px) and (max-width: 1360px) {
+  .menu__list .menu__tab { font-size: 0.82rem; padding-inline: 0.7rem; }
+}
+@media (min-width: 981px) and (max-width: 1120px) {
+  .menu__list { grid-template-columns: 1fr 230px 1fr; }
+  .menu__list .menu__tab { font-size: 0.74rem; padding-inline: 0.5rem; }
+  .menu__sello { --d: 200px; }
+}
