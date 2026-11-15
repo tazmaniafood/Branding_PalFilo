@@ -1244,13 +1244,14 @@ a {
 /* 9.5: letreros claros, como placa pintada de carrito */
 .menu__tab {
   color: var(--noche);
-  background: var(--crema);
+  /* Crema de la paleta, apagado un punto para que no encandile sobre la noche */
+  background: color-mix(in srgb, var(--crema) 91%, var(--noche));
   border: 2px solid var(--noche);
   box-shadow: 4px 5px 0 var(--uva);
 }
 .menu__tab:hover {
   color: var(--noche);
-  background: #FFFFFF;
+  background: var(--crema);
   border-color: var(--noche);
   box-shadow: 5px 6px 0 var(--uva);
 }
