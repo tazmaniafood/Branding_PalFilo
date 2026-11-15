@@ -1184,7 +1184,7 @@ a {
 .nombres td:first-child { color: var(--gris, #b9b0c8); text-decoration: line-through; text-decoration-color: rgb(255 36 64 / 0.6); }
 .nombres td b { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; color: var(--crema); letter-spacing: 0.01em; }
 .nombres td:last-child { font-style: italic; color: #CFE9FF; }
-.nombres .grupo th { padding-top: 1.2rem; color: var(--tomate); font-weight: 900; border-bottom: 2px solid var(--tomate); }
+.nombres .nombres__cat th { padding-top: 1.2rem; color: var(--tomate); font-weight: 900; border-bottom: 2px solid var(--tomate); }
 
 /* Salsas */
 .salsas { display: grid; grid-template-columns: repeat(3, minmax(60px, 110px)) 1fr; gap: var(--space-sm); align-items: end; margin-block: var(--space-md); }
@@ -1692,3 +1692,14 @@ a {
 .lista-reglas { margin: var(--space-md, 1.5rem) 0 0; padding-left: 1.2em; max-width: 68ch; color: var(--text-secondary); }
 .lista-reglas li { margin: 0.35em 0; }
 .lista-reglas li::marker { color: var(--tomate); }
+
+/* 11.3: Lilita solo en sus dos estilos; sin negrita falsa */
+html { font-synthesis: none; }
+.letrero, .grupo__eyebrow, .menu__tab, .paso__nombre, .nombres td b { font-weight: 400; }
+/* Título de cada parte en el índice: letrero de picó, igual que los títulos */
+.grupo__eyebrow { color: var(--n); -webkit-text-stroke: 0.07em var(--crema); paint-order: stroke fill;
+  text-shadow: 0.06em 0.06em 0 var(--uva), 0.1em 0.1em 0 var(--uva); }
+/* Nombres de platos en la tabla: Lilita plana, en mayúsculas */
+.nombres td b { text-transform: uppercase; letter-spacing: 0.02em; font-size: 1.05rem; }
+.nombres td:last-child { color: color-mix(in srgb, var(--cian) 35%, var(--crema)); }
+.nombres td:last-child { font-style: italic; }
