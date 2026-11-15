@@ -305,3 +305,36 @@
   document.addEventListener("visibilitychange", function () { if (document.hidden) parar(); else arrancar(); });
   arrancar();
 })();
+
+/* Carta de nombres: una categoría a la vez */
+(function () {
+  document.querySelectorAll("[data-carta]").forEach(function (carta) {
+    var chips = Array.prototype.slice.call(carta.querySelectorAll('.chip[role="tab"]'));
+    function elegir(chip, foco) {
+      chips.forEach(function (c) {
+        var on = c === chip;
+        c.setAttribute("aria-selected", String(on));
+        c.tabIndex = on ? 0 : -1;
+        var panel = document.getElementById(c.getAttribute("aria-controls"));
+        if (panel) panel.hidden = !on;
+      });
+      if (foco) chip.focus();
+    }
+    chips.forEach(function (c, i) {
+      c.addEventListener("click", function () { elegir(c); });
+      c.addEventListener("keydown", function (e) {
+        var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+        if (!d) return;
+        e.preventDefault();
+        elegir(chips[(i + d + chips.length) % chips.length], true);
+      });
+    });
+  });
+  /* Muestras de componentes: los selectores de ejemplo se pueden tocar */
+  document.querySelectorAll('.muestra .chips[role="group"]').forEach(function (g) {
+    g.addEventListener("click", function (e) {
+      var c = e.target.closest(".chip"); if (!c) return;
+      g.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", String(x === c)); });
+    });
+  });
+})();
