@@ -1601,3 +1601,90 @@ a {
 
 /* Sin criaturas apagadas detrás de las secciones */
 .chapter.grupo::after { display: none; }
+
+/* ==========================================================
+   10.3: CARRUSEL DE CRIATURAS EN LA PORTADA Y HEADER INTEGRADO
+   ========================================================== */
+.cartel.portada {
+  grid-template-areas: "texto criatura" "nota nota";
+}
+
+/* Una ventana redonda de noche donde se turnan las criaturas (SVG animados) */
+.carrusel-neon {
+  grid-area: criatura;
+  justify-self: center;
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-sm);
+  width: min(100%, 440px);
+}
+.carrusel-neon__ventana {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 42%, #22143c 0, #140c26 55%, var(--noche) 78%);
+  box-shadow:
+    inset 0 0 0 1.5px rgb(255 241 220 / 0.14),
+    inset 0 0 60px rgb(91 13 168 / 0.35),
+    0 30px 60px -30px rgb(0 0 0 / 0.7);
+}
+.carrusel-neon__item {
+  position: absolute;
+  inset: 13%;
+  width: 74%;
+  height: 74%;
+  object-fit: contain;
+  opacity: 0;
+  translate: 40% 0;
+  rotate: 18deg;
+  scale: 0.85;
+  transition: opacity 0.45s var(--ease-suave), translate 0.55s cubic-bezier(.34,1.4,.64,1), rotate 0.55s cubic-bezier(.34,1.4,.64,1), scale 0.55s var(--ease-suave);
+}
+.carrusel-neon__item.is-activa { opacity: 1; translate: 0 0; rotate: 0deg; scale: 1; }
+.carrusel-neon__item.is-saliendo { opacity: 0; translate: -40% 0; rotate: -18deg; scale: 0.85; }
+
+.carrusel-neon__puntos { display: flex; gap: 10px; }
+.carrusel-neon__punto {
+  width: 10px; height: 10px; padding: 0; border: 0; border-radius: 99px; cursor: pointer;
+  background: rgb(255 241 220 / 0.25);
+  transition: width 0.3s var(--ease-suave), background 0.3s var(--ease-suave), box-shadow 0.3s var(--ease-suave);
+}
+.carrusel-neon__punto[aria-pressed="true"] { width: 28px; background: var(--n); box-shadow: 0 0 10px var(--n); }
+.carrusel-neon__punto:focus-visible { outline: 2px solid var(--crema); outline-offset: 3px; }
+
+@media (max-width: 999px) {
+  .cartel.portada { grid-template-areas: "criatura" "texto" "nota"; }
+  .carrusel-neon { width: min(70%, 300px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carrusel-neon__item { transition: opacity 0.2s; translate: 0 0; rotate: 0deg; scale: 1; }
+}
+
+/* ---------- Header: letreros que se leen sobre la carpa ---------- */
+/* Cada letrero es una tablilla de noche translúcida, con la raya de su
+   color arriba (donde amarra el cordel) y el nombre en Lilita. */
+.menu__tab,
+.menu__tab:hover,
+.menu__tab[aria-selected="true"] {
+  background: rgb(13 9 25 / 0.78);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 0 0 10px 10px;
+  padding: 0.5rem 1.05rem 0.42rem;
+}
+.menu__item > .menu__tab { font-size: 1.15rem; }
+.menu__tab:hover { background: rgb(13 9 25 / 0.9); }
+.menu__tab[aria-selected="true"] {
+  background: color-mix(in srgb, var(--n) 14%, rgb(13 9 25 / 0.92));
+  text-shadow: none;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--n) 30%, transparent), 0 -4px 16px -6px var(--n);
+}
+.menu__lado { gap: 26px; }
+/* el submenú sale debajo de la tablilla, con la raya de la parte */
+.menu__sub { border-top: 3px solid var(--n, var(--mango)); border-radius: 0 0 12px 12px; box-shadow: 0 18px 40px rgb(0 0 0 / 0.55); }
+
+.cartel.portada { padding-bottom: var(--space-md); row-gap: var(--space-md); }
+@media (min-width: 1000px) { .cartel.portada + main .chapter.grupo, main .chapter.grupo { padding-top: var(--space-xl); } }

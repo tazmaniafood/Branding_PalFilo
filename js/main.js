@@ -267,3 +267,33 @@
     if (document.getElementById(id)) showSection(id, { updateHash: false, scroll: true });
   });
 })();
+
+/* Carrusel de criaturas de la portada: una a la vez, se pausa al pasar el mouse */
+(function () {
+  var root = document.querySelector("[data-carrusel]");
+  if (!root) return;
+  var items = Array.prototype.slice.call(root.querySelectorAll(".carrusel-neon__item"));
+  var puntos = Array.prototype.slice.call(root.querySelectorAll(".carrusel-neon__punto"));
+  if (items.length < 2) return;
+  var actual = 0, timer = null;
+  var quieto = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function ir(n) {
+    if (n === actual) return;
+    var sale = items[actual];
+    sale.classList.remove("is-activa");
+    sale.classList.add("is-saliendo");
+    setTimeout(function () { sale.classList.remove("is-saliendo"); }, 600);
+    actual = (n + items.length) % items.length;
+    items[actual].classList.add("is-activa");
+    puntos.forEach(function (p, i) { p.setAttribute("aria-pressed", String(i === actual)); });
+  }
+  function arrancar() { if (!quieto && !timer) timer = setInterval(function () { ir(actual + 1); }, 4200); }
+  function parar() { clearInterval(timer); timer = null; }
+
+  puntos.forEach(function (p, i) { p.addEventListener("click", function () { parar(); ir(i); arrancar(); }); });
+  root.addEventListener("mouseenter", parar);
+  root.addEventListener("mouseleave", arrancar);
+  document.addEventListener("visibilitychange", function () { if (document.hidden) parar(); else arrancar(); });
+  arrancar();
+})();
