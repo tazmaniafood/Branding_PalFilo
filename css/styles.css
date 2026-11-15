@@ -117,8 +117,8 @@ a {
 .menu::after {
   top: 100%;
   height: 54px;
-  /* Sin tubo de neón: el faldón queda solo con su forma de ondas */
-  background: none;
+  /* Solo un hilo crema muy tenue que dibuja la forma de las ondas */
+  background: var(--falda-borde) 0 0 / 56px 54px repeat-x;
 }
 
 .menu__list,
@@ -302,7 +302,7 @@ a {
 .footer::after {
   top: -54px;
   height: 54px;
-  background: none;
+  background: var(--falda-borde-arriba) 0 0 / 56px 54px repeat-x;
 }
 
 /* ==========================================================
