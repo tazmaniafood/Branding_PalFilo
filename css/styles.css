@@ -1240,3 +1240,24 @@ a {
 .subsec:focus, .subsec:focus-visible { outline: none; box-shadow: none; }
 .subsec:focus, .subsec:focus-visible { outline: none; box-shadow: none; }
 .columnas + .columnas { margin-top: var(--space-lg); }
+
+/* 9.5: letreros claros, como placa pintada de carrito */
+.menu__tab {
+  color: var(--noche);
+  background: var(--crema);
+  border: 2px solid var(--noche);
+  box-shadow: 4px 5px 0 var(--uva);
+}
+.menu__tab:hover {
+  color: var(--noche);
+  background: #FFFFFF;
+  border-color: var(--noche);
+  box-shadow: 5px 6px 0 var(--uva);
+}
+.menu__tab[aria-selected="true"] {
+  color: var(--noche);
+  background: var(--mango);
+  border-color: var(--noche);
+  box-shadow: 4px 5px 0 var(--uva), 0 0 18px rgb(255 183 0 / 0.45);
+}
+.menu__tab:focus-visible { outline: 3px solid var(--cian); outline-offset: 3px; }
