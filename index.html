@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0D0919">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/tokens.css?v=9.4">
-  <link rel="stylesheet" href="css/styles.css?v=11.8">
+  <link rel="stylesheet" href="css/styles.css?v=11.9">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -49,7 +49,7 @@
       </div>
     </figure>
 
-    <p class="cartel__nota">Borrador 11.8</p>
+    <p class="cartel__nota">Borrador 11.9</p>
   </header>
 
 
@@ -557,6 +557,17 @@
       <h3 class="letrero sub" style="--n: var(--mango);">De diario</h3>
       <div class="iconos"><figure class="icono"><img src="img/iconos/pico.svg?v=11.7" alt="" width="120" height="120" loading="lazy"><figcaption>Picó</figcaption></figure><figure class="icono"><img src="img/iconos/sombrero.svg?v=11.7" alt="" width="120" height="120" loading="lazy"><figcaption>Sombrero vueltiao</figcaption></figure><figure class="icono"><img src="img/iconos/palmera.svg?v=11.7" alt="" width="120" height="120" loading="lazy"><figcaption>Palmera</figcaption></figure><figure class="icono"><img src="img/iconos/sol.svg?v=11.7" alt="" width="120" height="120" loading="lazy"><figcaption>Sol</figcaption></figure><figure class="icono"><img src="img/iconos/carrito.svg?v=11.7" alt="" width="120" height="120" loading="lazy"><figcaption>Carrito de fritos</figcaption></figure><figure class="icono"><img src="img/iconos/termo.svg?v=11.7" alt="" width="120" height="120" loading="lazy"><figcaption>Termo de tinto</figcaption></figure><figure class="icono"><img src="img/iconos/cayena.svg?v=11.7" alt="" width="120" height="120" loading="lazy"><figcaption>Cayena</figcaption></figure><figure class="icono"><img src="img/iconos/balcon.svg?v=11.7" alt="" width="120" height="120" loading="lazy"><figcaption>Balcón colonial</figcaption></figure></div>
 
+      <h3 class="letrero sub" style="--n: var(--cian);">Comida</h3>
+      <div class="comida-modo">
+        <div class="segmento" role="group" aria-label="Versión de los íconos de comida" data-modo-comida><span class="segmento__label">Versión</span><button type="button" aria-pressed="true" data-modo="neon">Neón, de ambiente</button><button type="button" aria-pressed="false" data-modo="limpio">Limpia, de interfaz</button></div>
+      </div>
+      <div class="iconos iconos--comida" data-modo="neon"><figure class="icono icono--comida"><img class="icono__neon" src="img/iconos/comida-pizza-neon.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><img class="icono__limpio" src="img/iconos/comida-pizza.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><figcaption>Pizza</figcaption></figure><figure class="icono icono--comida"><img class="icono__neon" src="img/iconos/comida-salchipapa-neon.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><img class="icono__limpio" src="img/iconos/comida-salchipapa.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><figcaption>Salchipapa</figcaption></figure><figure class="icono icono--comida"><img class="icono__neon" src="img/iconos/comida-burguer-neon.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><img class="icono__limpio" src="img/iconos/comida-burguer.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><figcaption>Burguer</figcaption></figure><figure class="icono icono--comida"><img class="icono__neon" src="img/iconos/comida-perro-neon.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><img class="icono__limpio" src="img/iconos/comida-perro.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><figcaption>Perro caliente</figcaption></figure><figure class="icono icono--comida"><img class="icono__neon" src="img/iconos/comida-mazorcada-neon.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><img class="icono__limpio" src="img/iconos/comida-mazorcada.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><figcaption>Mazorcada</figcaption></figure><figure class="icono icono--comida"><img class="icono__neon" src="img/iconos/comida-bebida-neon.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><img class="icono__limpio" src="img/iconos/comida-bebida.svg?v=11.9" alt="" width="160" height="160" loading="lazy"><figcaption>Bebida</figcaption></figure></div>
+      <ul class="lista-reglas">
+        <li><b>Con neón</b> cuando son ambiente: la baldosa de la carpa, el letrero de abierto, stickers y piezas de noche.</li>
+        <li><b>Limpios</b> en la interfaz: el menú de categorías de la página, botones y etiquetas. Reemplazan a los emojis.</li>
+        <li><b>La foto de la comida nunca lleva neón.</b> Va natural, con su color real: el neón la vuelve verde o morada y quita las ganas de comer.</li>
+      </ul>
+
       <h3 class="letrero sub" style="--n: var(--tomate);">Por temporada</h3>
       <div class="carta temporadas" data-carta>
         <div class="chips" role="tablist" aria-label="Temporadas"><button type="button" class="chip" role="tab" id="tem-carnaval" aria-controls="panel-tem-carnaval" aria-selected="true" tabindex="0">Carnaval</button><button type="button" class="chip" role="tab" id="tem-vallenato" aria-controls="panel-tem-vallenato" aria-selected="false" tabindex="-1">Vallenato</button><button type="button" class="chip" role="tab" id="tem-seleccion" aria-controls="panel-tem-seleccion" aria-selected="false" tabindex="-1">Selección</button><button type="button" class="chip" role="tab" id="tem-halloween" aria-controls="panel-tem-halloween" aria-selected="false" tabindex="-1">Halloween</button><button type="button" class="chip" role="tab" id="tem-navidad" aria-controls="panel-tem-navidad" aria-selected="false" tabindex="-1">Navidad</button></div>
@@ -1009,11 +1020,11 @@
         <a href="#eco-legal" data-action="show-section" data-target="eco-legal" style="--n: var(--tomate);">Economía</a>
       </nav>
     </div>
-    <p class="footer__meta">Guía interna de marca, borrador 11.8. San José, California. palfilo.com</p>
+    <p class="footer__meta">Guía interna de marca, borrador 11.9. San José, California. palfilo.com</p>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/main.js?v=11.8" defer></script>
+  <script src="js/main.js?v=11.9" defer></script>
 </body>
 </html>

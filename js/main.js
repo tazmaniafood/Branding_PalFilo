@@ -348,3 +348,14 @@
     });
   });
 })();
+
+/* Íconos de comida: cambiar entre versión neón y limpia */
+(function () {
+  var g = document.querySelector("[data-modo-comida]"), grid = document.querySelector(".iconos--comida");
+  if (!g || !grid) return;
+  g.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-modo]"); if (!b) return;
+    g.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    grid.setAttribute("data-modo", b.getAttribute("data-modo"));
+  });
+})();
