@@ -1548,3 +1548,56 @@ a {
   .footer__cuerpo { grid-template-columns: 1fr; gap: var(--space-md); }
   .footer__mapa { justify-content: flex-start; }
 }
+
+/* ==========================================================
+   10.2: LETREROS MINIMAL, SELLO CENTRADO, LEMA
+   ========================================================== */
+/* Letreros: siguen colgando del cordel, pero ahora son una raya de
+   color de la parte y el nombre en Lilita, como el índice de la portada */
+.menu__tab,
+.menu__tab:hover,
+.menu__tab[aria-selected="true"] {
+  background: transparent;
+  border: 0;
+  border-top: 3px solid color-mix(in srgb, var(--n) 60%, transparent);
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--crema);
+  padding: 0.55rem 0.4rem 0.2rem;
+  rotate: 0deg;
+}
+.menu__item > .menu__tab { font-size: 1.3rem; letter-spacing: 0.02em; }
+.menu__tab::after { top: -6px; background: var(--n); width: 8px; height: 8px; }
+.menu__tab::before { background: linear-gradient(rgb(255 241 220 / 0.1), color-mix(in srgb, var(--n) 70%, transparent)); }
+.menu__tab:hover { color: var(--n); border-top-color: var(--n); }
+.menu__tab[aria-selected="true"] {
+  color: var(--n);
+  border-top: 4px solid var(--n);
+  text-shadow: 0 0 14px color-mix(in srgb, var(--n) 55%, transparent);
+  box-shadow: 0 -6px 14px -6px color-mix(in srgb, var(--n) 80%, transparent);
+}
+.menu__tab[aria-selected="true"]::before { background: linear-gradient(rgb(255 241 220 / 0.1), var(--n)); }
+.menu__tab[aria-selected="true"]::after { background: var(--n); }
+@media (prefers-reduced-motion: no-preference) {
+  .menu__tab[aria-selected="true"] { animation: columpio 0.9s var(--ease-out) both; }
+}
+.menu__lado { gap: 44px; }
+
+/* Al bajar, el sello se recoge y queda centrado en la carpa */
+.menu--compacto .menu__sello { top: calc(50% + 18px); translate: -50% -50%; }
+
+/* Lema de la portada: la tipografía principal, sin efectos */
+.portada__lema {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3rem, 1.4rem + 5vw, 6.2rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--crema);
+  max-width: 11ch;
+}
+
+/* Sin criaturas apagadas detrás de las secciones */
+.chapter.grupo::after { display: none; }
