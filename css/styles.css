@@ -1478,3 +1478,73 @@ a {
   .chapter.grupo::after { top: 26rem; opacity: 0.09; }
 }
 .chapter.grupo[hidden] { display: none; }
+
+/* ==========================================================
+   10.1: HEADER Y FOOTER AFINADOS
+   ========================================================== */
+/* Carpa: la baldosa baja de volumen para que el logo sea lo único que brilla */
+.menu::before {
+  background:
+    linear-gradient(rgb(13 9 25 / 0.78), rgb(13 9 25 / 0.62)),
+    var(--baldosa);
+}
+.footer::before {
+  background:
+    linear-gradient(rgb(13 9 25 / 0.8), rgb(13 9 25 / 0.92)),
+    var(--baldosa);
+}
+
+/* Sello más contenido; al bajar se recoge dentro de la carpa en todas las pantallas */
+@media (min-width: 981px) {
+  .menu__sello { --d: 236px; transition: width 0.3s var(--ease-suave), top 0.3s var(--ease-suave); }
+  .menu--compacto .menu__sello { --d: 112px; top: 6px; }
+  .menu__list { min-height: 104px; transition: min-height 0.3s var(--ease-suave); }
+  .menu--compacto .menu__list { min-height: 84px; }
+  .menu__list { grid-template-columns: 1fr 300px 1fr; }
+  .cartel.portada { padding-top: calc(var(--space-2xl) + 40px); }
+  .chapter.grupo { padding-top: calc(var(--space-xl) + 40px); }
+}
+@media (max-width: 980px) {
+  .menu__sello { --d: 150px; }
+  .menu__list { padding-top: 128px; }
+}
+@media (max-width: 760px) {
+  .menu__sello { --d: 120px; top: 6px; }
+  .menu__list { padding-top: 104px; }
+  .menu--compacto .menu__list { padding-top: var(--space-sm); }
+  .menu--compacto .menu__sello { opacity: 0; scale: 0.4; pointer-events: none; }
+}
+
+/* Footer: una firma con salida, no una tarjeta */
+.footer { text-align: left; padding: var(--space-lg) 0 var(--space-md); }
+.footer__placa { display: none; }
+.footer__cuerpo {
+  width: min(100% - 2 * var(--space-md), var(--ancho-guia));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-xl);
+}
+.footer__marca { display: grid; gap: var(--space-xs); justify-items: start; }
+.footer__marca img { width: 220px; height: auto; }
+.footer__line { font-size: var(--step-2); line-height: 1; -webkit-text-stroke: 0; }
+.footer__mapa { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-xs) var(--space-lg); }
+.footer__mapa a {
+  font-family: var(--font-display); font-size: var(--step-1); text-transform: uppercase; letter-spacing: 0.02em;
+  color: var(--crema); text-decoration: none; padding-bottom: 4px;
+  border-bottom: 2px solid color-mix(in srgb, var(--n) 45%, transparent);
+  transition: color 0.2s var(--ease-suave), border-color 0.2s var(--ease-suave);
+}
+.footer__mapa a:hover { color: var(--n); border-color: var(--n); }
+.footer__mapa a:focus-visible { outline: 3px solid var(--n); outline-offset: 4px; }
+.footer .footer__meta {
+  width: min(100% - 2 * var(--space-md), var(--ancho-guia));
+  margin: var(--space-lg) auto 0; padding-top: var(--space-sm);
+  border-top: 1px solid rgb(255 241 220 / 0.12);
+  font-size: 0.85rem; color: var(--text-secondary); text-align: left;
+}
+@media (max-width: 760px) {
+  .footer__cuerpo { grid-template-columns: 1fr; gap: var(--space-md); }
+  .footer__mapa { justify-content: flex-start; }
+}

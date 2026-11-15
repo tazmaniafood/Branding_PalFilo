@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0D0919">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/tokens.css?v=9.4">
-  <link rel="stylesheet" href="css/styles.css?v=10.0">
+  <link rel="stylesheet" href="css/styles.css?v=10.1">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -64,7 +64,7 @@
         <span class="indice__que">Platos, nombres, salsas y cómo se vende</span>
       </a>
     </nav>
-    <p class="cartel__nota">Borrador 10.0</p>
+    <p class="cartel__nota">Borrador 10.1</p>
   </header>
 
 
@@ -659,10 +659,19 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__placa">
-      <p class="letrero footer__line" style="--n: var(--mango);">¡Coma que hay más!</p>
-      <p class="footer__meta">Guía de marca, borrador 9.1. San José, California.</p>
+    <div class="footer__cuerpo">
+      <div class="footer__marca">
+        <img src="img/logo/horizontal.png?v=10.1" alt="Pa'l Filo, Colombian street food" width="1100" height="420" loading="lazy">
+        <p class="letrero footer__line" style="--n: var(--mango);">¡Coma que hay más!</p>
+      </div>
+      <nav class="footer__mapa" aria-label="Partes de la guía">
+        <a href="#alma" data-action="show-section" data-target="alma" style="--n: var(--mango);">El alma</a>
+        <a href="#publicos" data-action="show-section" data-target="publicos" style="--n: var(--tomate);">Mercado</a>
+        <a href="#identidad" data-action="show-section" data-target="identidad" style="--n: var(--cian);">Expresión</a>
+        <a href="#menu" data-action="show-section" data-target="menu" style="--n: var(--lima);">Producto</a>
+      </nav>
     </div>
+    <p class="footer__meta">Guía interna de marca, borrador 10.1. San José, California. palfilo.com</p>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
