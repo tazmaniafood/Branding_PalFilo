@@ -1685,3 +1685,10 @@ a {
   text-shadow: 0.06em 0.06em 0 var(--uva), 0.1em 0.1em 0 var(--uva);
 }
 .letrero.portada__lema, .letrero.portada__lema > .portada__linea { color: var(--crema); -webkit-text-stroke: 0; text-shadow: none; }
+
+/* 11.2: canales en tres grupos */
+#redes .sub { margin: var(--space-lg, 2.5rem) 0 var(--space-sm, 1rem); }
+#redes .chapter__head + .sub { margin-top: 0; }
+.lista-reglas { margin: var(--space-md, 1.5rem) 0 0; padding-left: 1.2em; max-width: 68ch; color: var(--text-secondary); }
+.lista-reglas li { margin: 0.35em 0; }
+.lista-reglas li::marker { color: var(--tomate); }
