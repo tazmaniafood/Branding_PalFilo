@@ -49,7 +49,7 @@
       </div>
     </figure>
 
-    <p class="cartel__nota">Borrador 11.5</p>
+    <p class="cartel__nota">Borrador 11.6</p>
   </header>
 
 
@@ -700,7 +700,7 @@
       <div class="subsec" id="tec-sistema" role="tabpanel" aria-labelledby="st-tec-sistema" tabindex="-1" hidden>
       <header class="chapter__head">
         <h2 class="letrero chapter__title">El sistema</h2>
-        <p class="chapter__intro">Así está montado hoy. La página de pedidos no tiene servidor ni base de datos: el cliente arma su pedido en el teléfono y lo manda por WhatsApp, donde lo atendemos a mano.</p>
+        <p class="chapter__intro">Así está montado hoy. Ya existen la página de pedidos, el panel de la cocina y el servidor con su base de datos, pero todavía no están conectados entre sí: por ahora el cliente arma su pedido y lo manda por WhatsApp, donde lo atendemos a mano.</p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
       <h3 class="letrero sub" style="--n: var(--cian);">Lo que construimos</h3>
@@ -720,6 +720,16 @@
           <h3>Guía de marca</h3>
           <p>La que estás leyendo. Repositorio branding-TAZ, publicada en GitHub Pages.</p>
         </article>
+        <article class="nota" style="--n: var(--cian);">
+          <p class="nota__rol">Donde se atiende</p>
+          <h3>Panel de administración</h3>
+          <p>Cocina con el tablero Nuevos y Listos, Entregas con foto, Todos los pedidos, Estadísticas y Menú. Repositorio Frontend-admin. Hoy funciona con pedidos de prueba.</p>
+        </article>
+        <article class="nota" style="--n: var(--cian);">
+          <p class="nota__rol">Donde se guarda todo</p>
+          <h3>Servidor y base de datos</h3>
+          <p>Node.js con Express, PostgreSQL y Nginx en Ubuntu. Ya tiene las tablas de usuarios y pedidos; faltan las rutas de pedidos, login y Stripe. Repositorio Server-TAZ.</p>
+        </article>
       </div>
       <h3 class="letrero sub" style="--n: var(--mango);">Lo que usamos de otros</h3>
       <div class="columnas columnas--3">
@@ -736,7 +746,7 @@
         <article class="nota" style="--n: var(--mango);">
           <p class="nota__rol">Guarda el código</p>
           <h3>GitHub</h3>
-          <p>Los tres repositorios viven en la cuenta tazmaniafood. GitHub Pages publica la guía.</p>
+          <p>Los cinco repositorios viven en la cuenta tazmaniafood. GitHub Pages publica la guía.</p>
         </article>
         <article class="nota" style="--n: var(--mango);">
           <p class="nota__rol">La dirección</p>
@@ -759,7 +769,7 @@
       <div class="subsec" id="tec-datos" role="tabpanel" aria-labelledby="st-tec-datos" tabindex="-1" hidden>
       <header class="chapter__head">
         <h2 class="letrero chapter__title">Los datos</h2>
-        <p class="chapter__intro">Qué datos se toman, dónde quedan y quién los ve. Hoy casi todo vive en el teléfono del cliente y en el chat de WhatsApp.</p>
+        <p class="chapter__intro">Qué datos se toman, dónde quedan y quién los ve. Mientras la página y el panel no estén conectados al servidor, casi todo vive en el teléfono del cliente y en el chat de WhatsApp.</p>
         <span class="cenefa" aria-hidden="true"></span>
       </header>
       <div class="tabla-wrap">
@@ -785,7 +795,7 @@
       </div>
       <article class="nota nota--aviso" style="--n: var(--tomate);">
         <h3>Lo que no se guarda</h3>
-        <p>No hay un registro central de pedidos ni de clientes: el único historial es el chat de WhatsApp. Las apps guardan sus propios pedidos en sus paneles. Para saber cuánto se vende y quién vuelve, hace falta una hoja o un sistema donde quede cada pedido.</p>
+        <p>La base de datos ya tiene la tabla de pedidos, pero la página todavía no le manda nada: hoy el único historial es el chat de WhatsApp. Cuando la página envíe cada pedido al servidor, quedará el registro para saber cuánto se vende y quién vuelve.</p>
       </article>
         <nav class="pasos" aria-label="Seguir leyendo"><a class="paso paso--atras" href="#tec-sistema" data-action="show-section" data-target="tec-sistema"><span class="paso__dir">Anterior</span><span class="paso__nombre">El sistema</span></a><a class="paso paso--sigue" href="#tec-flujo" data-action="show-section" data-target="tec-flujo"><span class="paso__dir">Siguiente</span><span class="paso__nombre">El flujo</span></a></nav>
       </div>
@@ -912,7 +922,7 @@
         <a href="#eco-legal" data-action="show-section" data-target="eco-legal" style="--n: var(--tomate);">Economía</a>
       </nav>
     </div>
-    <p class="footer__meta">Guía interna de marca, borrador 11.5. San José, California. palfilo.com</p>
+    <p class="footer__meta">Guía interna de marca, borrador 11.6. San José, California. palfilo.com</p>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
