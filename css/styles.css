@@ -394,7 +394,7 @@ a {
 .app figcaption {
   font-family: var(--font-body);
   font-weight: 900;
-  color: color-mix(in srgb, var(--n) 25%, #FFFFFF);
+  color: color-mix(in srgb, var(--n) 25%, var(--crema));
   text-shadow: 0 0 8px color-mix(in srgb, var(--n) 70%, transparent), 0 0 20px color-mix(in srgb, var(--n) 35%, transparent);
 }
 
@@ -1019,7 +1019,7 @@ a {
 /* Ficha de DoorDash */
 .listing {
   overflow: hidden;
-  background: #FFFFFF;
+  background: var(--crema);
   color: #1A1A1A;
   border-radius: var(--radius-lg);
 }
@@ -1160,7 +1160,7 @@ a {
 .logo-uso p { margin:0; color:var(--gris); }
 .logo-uso__demo { aspect-ratio:4/3; display:grid; place-items:center; padding:1.25rem; border-radius:16px;
   background:var(--panel); border:1px solid var(--linea-suave); }
-.logo-uso__demo--claro { background:#FFFFFF; }
+.logo-uso__demo--claro { background:var(--crema); }
 .logo-uso__demo img { max-width:100%; max-height:100%; object-fit:contain; }
 
 /* ==========================================================
@@ -1657,3 +1657,13 @@ a {
 }
 .letrero.portada__lema > .portada__linea + .portada__linea { font-size: 0.62em; margin-top: 0.12em; }
 .letrero.portada__lema { font-size: clamp(3.4rem, 1.4rem + 6vw, 7.2rem); line-height: 0.92; }
+
+/* 10.7: los dos estilos de Lilita One en la muestra de tipografía */
+.nota .specimen__big--picotera {
+  font-family: var(--font-display); text-transform: uppercase;
+  color: var(--n); -webkit-text-stroke: 0.07em var(--crema); paint-order: stroke fill;
+  text-shadow: 0.06em 0.06em 0 var(--uva), 0.1em 0.1em 0 var(--uva),
+    0 0 18px color-mix(in srgb, var(--n) 75%, transparent), 0 0 42px color-mix(in srgb, var(--n) 45%, transparent);
+}
+.nota .specimen__big--plana { font-family: var(--font-display); text-transform: uppercase; color: var(--crema); text-shadow: none; -webkit-text-stroke: 0; }
+.nota .specimen__big--body { color: var(--crema); }
